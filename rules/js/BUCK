@@ -1,0 +1,11 @@
+export_file(
+    name = "build_vite.cjs",
+    src = "scripts/build_vite.cjs",
+    visibility = ["PUBLIC"],
+)
+
+export_file(
+    name = "run_vitest.cjs",
+    src = "scripts/run_vitest.cjs",
+    visibility = ["PUBLIC"],
+)

@@ -1,0 +1,8 @@
+[workspace]
+members = ["npm-herder"]
+resolver = "3"
+
+[workspace.package]
+authors = ["Fastclass Team"]
+edition = "2024"
+license = "MIT"

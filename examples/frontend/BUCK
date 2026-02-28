@@ -1,0 +1,34 @@
+load("//rules/js:sveltekit.bzl", "sveltekit_build")
+load("//rules/js:vitest.bzl", "vitest_test")
+
+sveltekit_build(
+    name = "web_app",
+    src = "src",
+    static = "static",
+    config = "svelte.config.js",
+    vite_config = "vite.config.ts",
+    package_json = "package.json",
+    deps = [
+        "//examples/frontend/vendor:sveltejs_kit_2.53.4",
+        "//examples/frontend/vendor:svelte_5.53.6",
+        "//examples/frontend/vendor:sveltejs_vite-plugin-svelte_6.2.4",
+        "//examples/frontend/vendor:vite_7.3.1",
+        "//examples/frontend/vendor:sveltejs_adapter-node_5.5.4",
+    ],
+)
+
+vitest_test(
+    name = "web_app_tests",
+    srcs = [
+        "src",
+        "package.json",
+    ],
+    vitest_config = "vite.config.ts",
+    deps = [
+        "//examples/frontend/vendor:sveltejs_kit_2.53.4",
+        "//examples/frontend/vendor:svelte_5.53.6",
+        "//examples/frontend/vendor:sveltejs_vite-plugin-svelte_6.2.4",
+        "//examples/frontend/vendor:vite_7.3.1",
+        "//examples/frontend/vendor:vitest_3.2.4",
+    ],
+)
