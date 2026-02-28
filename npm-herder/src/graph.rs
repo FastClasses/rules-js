@@ -129,6 +129,7 @@ mod tests {
                 .map(|(n, v)| (n.to_string(), v.to_string()))
                 .collect(),
             optional_dependencies: vec![],
+            is_dev: false,
         }
     }
 

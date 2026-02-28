@@ -9,3 +9,21 @@ export_file(
     src = "scripts/run_vitest.cjs",
     visibility = ["PUBLIC"],
 )
+
+export_file(
+    name = "run_js_test.cjs",
+    src = "scripts/run_js_test.cjs",
+    visibility = ["PUBLIC"],
+)
+
+export_file(
+    name = "run_tsc.cjs",
+    src = "scripts/run_tsc.cjs",
+    visibility = ["PUBLIC"],
+)
+
+export_file(
+    name = "run_eslint.cjs",
+    src = "scripts/run_eslint.cjs",
+    visibility = ["PUBLIC"],
+)

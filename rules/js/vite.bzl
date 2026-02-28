@@ -1,4 +1,4 @@
-load(":providers.bzl", "JsLibraryInfo")
+load(":providers.bzl", "JsLibraryInfo", "NodeToolchainInfo")
 load(":node_modules.bzl", "create_node_modules_tree")
 
 def _vite_build_impl(ctx):
@@ -16,7 +16,7 @@ def _vite_build_impl(ctx):
     src_dir = ctx.actions.copied_dir("src_dir", copy_map)
     out_build = ctx.actions.declare_output(ctx.attrs.out_dir)
 
-    node_exe = cmd_args(ctx.attrs._node[DefaultInfo].default_outputs[0], format="{}/bin/node")
+    node_exe = ctx.attrs._node[NodeToolchainInfo].node_exe
     vite_js = cmd_args(src_dir, format="{}/node_modules/vite/bin/vite.js")
     
     script = ctx.attrs._build_vite
@@ -36,7 +36,7 @@ vite_build = rule(
         "vite_config": attrs.source(),
         "deps": attrs.list(attrs.dep()),
         "out_dir": attrs.string(default = "dist"),
-        "_node": attrs.dep(default = "toolchains//:node"),
+        "_node": attrs.dep(default = "toolchains//:node_info"),
         "_build_vite": attrs.source(default = "//rules/js:build_vite.cjs"),
     }
 )

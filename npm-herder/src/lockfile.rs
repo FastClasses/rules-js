@@ -11,6 +11,7 @@ pub struct PackageInfo {
     pub integrity: Option<String>,
     pub dependencies: Vec<(String, String)>,
     pub optional_dependencies: Vec<(String, String)>,
+    pub is_dev: bool,
 }
 
 pub struct Lockfile {

@@ -89,9 +89,8 @@ fn extract_from_snapshots(yaml: &Value, npmrc: &NpmrcConfig) -> Result<Vec<Packa
         let (pkg_name, pkg_version) = parse_dep_path(base_key);
         let target_name = sanitize_target_name(base_key);
 
-        let pkg_meta = packages_meta.and_then(|pkgs| {
-            pkgs.get(&Value::String(base_key.to_string()))
-        });
+        let pkg_meta =
+            packages_meta.and_then(|pkgs| pkgs.get(&Value::String(base_key.to_string())));
 
         let tarball_url = pkg_meta
             .and_then(|m| m["resolution"]["tarball"].as_str())
@@ -118,6 +117,7 @@ fn extract_from_snapshots(yaml: &Value, npmrc: &NpmrcConfig) -> Result<Vec<Packa
             integrity,
             dependencies,
             optional_dependencies,
+            is_dev: false,
         });
     }
 
@@ -161,6 +161,7 @@ fn extract_from_packages(yaml: &Value, npmrc: &NpmrcConfig) -> Result<Vec<Packag
             integrity,
             dependencies,
             optional_dependencies,
+            is_dev: false,
         });
     }
 

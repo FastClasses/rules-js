@@ -1,5 +1,6 @@
+load(":providers.bzl", "NodeToolchainInfo")
+
 _NODE_SHASUM256 = {
-    # 22.14.0
     "node-v22.14.0-linux-x64.tar.gz": "9d942932535988091034dc94cc5f42b6dc8784d6366df3a36c4c9ccb3996f0c2",
     "node-v22.14.0-linux-arm64.tar.gz": "8cf30ff7250f9463b53c18f89c6c606dfda70378215b2c905d0a9a8b08bd45e0",
     "node-v22.14.0-darwin-arm64.tar.gz": "e9404633bc02a5162c5c573b1e2490f5fb44648345d64a958b17e325729a5e42",
@@ -47,3 +48,34 @@ def system_node_toolchain(
         strip_prefix = select(strip_prefix_map),
         visibility = ["PUBLIC"],
     )
+
+    node_exe_path = select({
+        "@prelude//os:linux": "bin/node",
+        "@prelude//os:macos": "bin/node",
+        "@prelude//os:windows": "node.exe",
+    })
+
+    _node_toolchain_rule(
+        name = name + "_info",
+        node_archive = ":" + name,
+        node_exe_path = node_exe_path,
+        visibility = ["PUBLIC"],
+    )
+
+def _node_toolchain_rule_impl(ctx):
+    node_exe = cmd_args(
+        ctx.attrs.node_archive[DefaultInfo].default_outputs[0],
+        format = "{{}}/{}".format(ctx.attrs.node_exe_path),
+    )
+    return [
+        DefaultInfo(default_output = ctx.attrs.node_archive[DefaultInfo].default_outputs[0]),
+        NodeToolchainInfo(node_exe = node_exe),
+    ]
+
+_node_toolchain_rule = rule(
+    impl = _node_toolchain_rule_impl,
+    attrs = {
+        "node_archive": attrs.dep(),
+        "node_exe_path": attrs.string(),
+    },
+)

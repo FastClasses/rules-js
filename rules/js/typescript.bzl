@@ -1,7 +1,7 @@
 load(":providers.bzl", "JsLibraryInfo", "NodeToolchainInfo")
 load(":node_modules.bzl", "create_node_modules_tree")
 
-def _vitest_test_impl(ctx):
+def _typescript_check_impl(ctx):
     npm_deps = [d for d in ctx.attrs.deps if JsLibraryInfo in d]
     node_modules = create_node_modules_tree(ctx, npm_deps)
 
@@ -9,33 +9,30 @@ def _vitest_test_impl(ctx):
     
     for src in ctx.attrs.srcs:
         copy_map[src.short_path] = src
-        
-    if ctx.attrs.vitest_config:
-        copy_map[ctx.attrs.vitest_config.short_path] = ctx.attrs.vitest_config
-        
+
+    copy_map[ctx.attrs.tsconfig.short_path] = ctx.attrs.tsconfig
     copy_map["node_modules"] = node_modules
 
     src_dir = ctx.actions.copied_dir("src_dir", copy_map)
 
     node_exe = ctx.attrs._node[NodeToolchainInfo].node_exe
-    script = ctx.attrs._run_vitest
+    script = ctx.attrs._run_tsc
 
-    return [
-        DefaultInfo(),
-        ExternalRunnerTestInfo(
-            type = "vitest",
-            command = [node_exe, script, node_exe, src_dir],
-            run_from_project_root = True,
-        )
-    ]
+    stamp = ctx.actions.declare_output("tsc_stamp")
 
-vitest_test = rule(
-    impl = _vitest_test_impl,
+    cmd = cmd_args([node_exe, script, node_exe, src_dir, stamp.as_output()])
+
+    ctx.actions.run(cmd, category = "typescript_check")
+
+    return [DefaultInfo(default_output = stamp)]
+
+typescript_check = rule(
+    impl = _typescript_check_impl,
     attrs = {
         "srcs": attrs.list(attrs.source(allow_directory = True), default = []),
-        "vitest_config": attrs.option(attrs.source(), default = None),
+        "tsconfig": attrs.source(default = "tsconfig.json"),
         "deps": attrs.list(attrs.dep()),
         "_node": attrs.dep(default = "toolchains//:node_info"),
-        "_run_vitest": attrs.source(default = "//rules/js:run_vitest.cjs"),
+        "_run_tsc": attrs.source(default = "//rules/js:run_tsc.cjs"),
     }
 )
