@@ -1,4 +1,4 @@
-load(":providers.bzl", "JsRuntimeInfo", "NodeToolchainInfo", "BunToolchainInfo", "DenoToolchainInfo")
+load(":providers.bzl", "BunToolchainInfo", "DenoToolchainInfo", "JsRuntimeInfo", "NodeToolchainInfo")
 
 _NODE_SHASUM256 = {
     "node-v22.14.0-linux-x64.tar.gz": "9d942932535988091034dc94cc5f42b6dc8784d6366df3a36c4c9ccb3996f0c2",
@@ -16,12 +16,11 @@ def _get_node_sha256(version, tarball_name):
     return _NODE_SHASUM256[key]
 
 def system_node_toolchain(
-    name = "node_toolchain",
-    version = "22.14.0",
-):
+        name = "node_toolchain",
+        version = "22.14.0"):
     platforms = {
-        "@prelude//os:linux":   ("linux-x64", "tar.gz"),
-        "@prelude//os:macos":   ("darwin-arm64", "tar.gz"),
+        "@prelude//os:linux": ("linux-x64", "tar.gz"),
+        "@prelude//os:macos": ("darwin-arm64", "tar.gz"),
         "@prelude//os:windows": ("win-x64", "zip"),
     }
 
@@ -34,7 +33,7 @@ def system_node_toolchain(
         tarball = "node-v{}-{}.{}".format(version, plat, ext)
         url = "https://nodejs.org/dist/v{}/{}".format(version, tarball)
         sha = _get_node_sha256(version, tarball)
-        
+
         urls_map[constraint] = [url]
         sha256_map[constraint] = sha
         strip_prefix_map[constraint] = "node-v{}-{}".format(version, plat)
@@ -42,10 +41,10 @@ def system_node_toolchain(
 
     native.http_archive(
         name = name,
-        urls = select(urls_map),
         sha256 = select(sha256_map),
-        type = select(type_map),
         strip_prefix = select(strip_prefix_map),
+        type = select(type_map),
+        urls = select(urls_map),
         visibility = ["PUBLIC"],
     )
 
@@ -74,13 +73,12 @@ def _node_toolchain_rule_impl(ctx):
     ]
 
 _node_toolchain_rule = rule(
-    impl = _node_toolchain_rule_impl,
     attrs = {
         "node_archive": attrs.dep(),
         "node_exe_path": attrs.string(),
     },
+    impl = _node_toolchain_rule_impl,
 )
-
 
 _BUN_SHASUM256 = {
     "bun-v1.1.27-linux-x64.zip": "22bd04407f9b9c73f03936a4acefd943aa7278e5af86ee5b2b98fe60b37c3327",
@@ -98,12 +96,11 @@ def _get_bun_sha256(version, tarball_name):
     return _BUN_SHASUM256[key]
 
 def system_bun_toolchain(
-    name = "bun_toolchain",
-    version = "1.1.27",
-):
+        name = "bun_toolchain",
+        version = "1.1.27"):
     platforms = {
-        "@prelude//os:linux":   "bun-linux-x64.zip",
-        "@prelude//os:macos":   "bun-darwin-aarch64.zip",
+        "@prelude//os:linux": "bun-linux-x64.zip",
+        "@prelude//os:macos": "bun-darwin-aarch64.zip",
         "@prelude//os:windows": "bun-windows-x64.zip",
     }
 
@@ -116,13 +113,13 @@ def system_bun_toolchain(
 
     native.http_archive(
         name = name,
-        urls = select(urls_map),
         sha256 = select(sha256_map),
         strip_prefix = select({
             "@prelude//os:linux": "bun-linux-x64",
             "@prelude//os:macos": "bun-darwin-aarch64",
             "@prelude//os:windows": "bun-windows-x64",
         }),
+        urls = select(urls_map),
         visibility = ["PUBLIC"],
     )
 
@@ -150,11 +147,11 @@ def _bun_toolchain_rule_impl(ctx):
     ]
 
 _bun_toolchain_rule = rule(
-    impl = _bun_toolchain_rule_impl,
     attrs = {
         "bun_archive": attrs.dep(),
         "bun_exe_path": attrs.string(),
     },
+    impl = _bun_toolchain_rule_impl,
 )
 
 _DENO_SHASUM256 = {
@@ -172,12 +169,11 @@ def _get_deno_sha256(version, tarball_name):
     return _DENO_SHASUM256[key]
 
 def system_deno_toolchain(
-    name = "deno_toolchain",
-    version = "1.46.3",
-):
+        name = "deno_toolchain",
+        version = "1.46.3"):
     platforms = {
-        "@prelude//os:linux":   "deno-x86_64-unknown-linux-gnu.zip",
-        "@prelude//os:macos":   "deno-aarch64-apple-darwin.zip",
+        "@prelude//os:linux": "deno-x86_64-unknown-linux-gnu.zip",
+        "@prelude//os:macos": "deno-aarch64-apple-darwin.zip",
         "@prelude//os:windows": "deno-x86_64-pc-windows-msvc.zip",
     }
 
@@ -190,8 +186,8 @@ def system_deno_toolchain(
 
     native.http_archive(
         name = name,
-        urls = select(urls_map),
         sha256 = select(sha256_map),
+        urls = select(urls_map),
         visibility = ["PUBLIC"],
     )
 
@@ -219,17 +215,16 @@ def _deno_toolchain_rule_impl(ctx):
     ]
 
 _deno_toolchain_rule = rule(
-    impl = _deno_toolchain_rule_impl,
     attrs = {
         "deno_archive": attrs.dep(),
         "deno_exe_path": attrs.string(),
     },
+    impl = _deno_toolchain_rule_impl,
 )
 
 def js_default_runtime(
-    name = "js",
-    runtime = ":node_info",
-):
+        name = "js",
+        runtime = ":node_info"):
     native.alias(
         name = name,
         actual = runtime,

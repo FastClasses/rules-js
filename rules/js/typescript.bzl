@@ -1,12 +1,12 @@
-load(":providers.bzl", "JsLibraryInfo", "JsRuntimeInfo")
 load(":node_modules.bzl", "create_node_modules_tree")
+load(":providers.bzl", "JsLibraryInfo", "JsRuntimeInfo")
 
 def _typescript_check_impl(ctx):
     npm_deps = [d for d in ctx.attrs.deps if JsLibraryInfo in d]
     node_modules = create_node_modules_tree(ctx, npm_deps)
 
     copy_map = {}
-    
+
     for src in ctx.attrs.srcs:
         copy_map[src.short_path] = src
 
@@ -27,12 +27,15 @@ def _typescript_check_impl(ctx):
     return [DefaultInfo(default_output = stamp)]
 
 typescript_check = rule(
-    impl = _typescript_check_impl,
     attrs = {
-        "srcs": attrs.list(attrs.source(allow_directory = True), default = []),
+        "srcs": attrs.list(
+            attrs.source(allow_directory = True),
+            default = [],
+        ),
         "tsconfig": attrs.source(default = "tsconfig.json"),
         "deps": attrs.list(attrs.dep()),
         "_js_runtime": attrs.dep(default = "toolchains//:js"),
         "_run_tsc": attrs.source(default = "//rules/js:run_tsc.mjs"),
-    }
+    },
+    impl = _typescript_check_impl,
 )

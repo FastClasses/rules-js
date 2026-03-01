@@ -1,11 +1,11 @@
 use anyhow::{Context, Result};
-use base64::{engine::general_purpose::STANDARD as BASE64, Engine as _};
+use base64::{Engine as _, engine::general_purpose::STANDARD as BASE64};
 use flate2::read::GzDecoder;
 use reqwest::blocking::Client;
-use reqwest::header::{HeaderMap, HeaderValue, AUTHORIZATION};
+use reqwest::header::{AUTHORIZATION, HeaderMap, HeaderValue};
 use sha1::Sha1;
 use sha2::{Digest, Sha256, Sha512};
-use std::fs::{create_dir_all, File};
+use std::fs::{File, create_dir_all};
 use std::io::Read;
 use std::path::PathBuf;
 use tar::Archive;
@@ -23,7 +23,14 @@ pub async fn vendor_packages(
     let vendor_path = PathBuf::from(vendor_dir);
     create_dir_all(&vendor_path)?;
 
-    let mut work: Vec<(String, String, String, Option<String>, Option<String>, PathBuf)> = Vec::new();
+    let mut work: Vec<(
+        String,
+        String,
+        String,
+        Option<String>,
+        Option<String>,
+        PathBuf,
+    )> = Vec::new();
 
     for pkg in packages {
         let out_dir = vendor_path.join(&pkg.target_name);
@@ -78,7 +85,9 @@ pub async fn vendor_packages(
     }
 
     for handle in handles {
-        handle.join().map_err(|_| anyhow::anyhow!("Thread panicked"))??;
+        handle
+            .join()
+            .map_err(|_| anyhow::anyhow!("Thread panicked"))??;
     }
 
     Ok(())
@@ -185,7 +194,10 @@ fn verify_integrity(path: &std::path::Path, integrity: &str) -> Result<()> {
         hasher.update(&buf);
         let actual = hasher.finalize();
         if actual.as_slice() != expected.as_slice() {
-            return Err(anyhow::anyhow!("Integrity mismatch (sha512) for {}", path.display()));
+            return Err(anyhow::anyhow!(
+                "Integrity mismatch (sha512) for {}",
+                path.display()
+            ));
         }
     } else if let Some(expected_b64) = integrity.strip_prefix("sha256-") {
         let expected = BASE64.decode(expected_b64)?;
@@ -193,7 +205,10 @@ fn verify_integrity(path: &std::path::Path, integrity: &str) -> Result<()> {
         hasher.update(&buf);
         let actual = hasher.finalize();
         if actual.as_slice() != expected.as_slice() {
-            return Err(anyhow::anyhow!("Integrity mismatch (sha256) for {}", path.display()));
+            return Err(anyhow::anyhow!(
+                "Integrity mismatch (sha256) for {}",
+                path.display()
+            ));
         }
     } else if let Some(expected_b64) = integrity.strip_prefix("sha1-") {
         let expected = BASE64.decode(expected_b64)?;
@@ -201,10 +216,16 @@ fn verify_integrity(path: &std::path::Path, integrity: &str) -> Result<()> {
         hasher.update(&buf);
         let actual = hasher.finalize();
         if actual.as_slice() != expected.as_slice() {
-            return Err(anyhow::anyhow!("Integrity mismatch (sha1) for {}", path.display()));
+            return Err(anyhow::anyhow!(
+                "Integrity mismatch (sha1) for {}",
+                path.display()
+            ));
         }
     } else {
-        eprintln!("Warning: unknown integrity algorithm for {}, skipping verification", path.display());
+        eprintln!(
+            "Warning: unknown integrity algorithm for {}, skipping verification",
+            path.display()
+        );
     }
 
     Ok(())

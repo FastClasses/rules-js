@@ -1,12 +1,12 @@
-load(":providers.bzl", "JsLibraryInfo", "JsRuntimeInfo")
 load(":node_modules.bzl", "create_node_modules_tree")
+load(":providers.bzl", "JsLibraryInfo", "JsRuntimeInfo")
 
 def _eslint_check_impl(ctx):
     npm_deps = [d for d in ctx.attrs.deps if JsLibraryInfo in d]
     node_modules = create_node_modules_tree(ctx, npm_deps)
 
     copy_map = {}
-    
+
     for src in ctx.attrs.srcs:
         copy_map[src.short_path] = src
 
@@ -23,19 +23,25 @@ def _eslint_check_impl(ctx):
     return [
         DefaultInfo(),
         ExternalRunnerTestInfo(
-            type = "eslint",
             command = [node_exe, script, node_exe, src_dir],
             run_from_project_root = True,
-        )
+            type = "eslint",
+        ),
     ]
 
 eslint_check = rule(
-    impl = _eslint_check_impl,
     attrs = {
-        "srcs": attrs.list(attrs.source(allow_directory = True), default = []),
-        "eslint_config": attrs.option(attrs.source(), default = None),
+        "srcs": attrs.list(
+            attrs.source(allow_directory = True),
+            default = [],
+        ),
+        "eslint_config": attrs.option(
+            attrs.source(),
+            default = None,
+        ),
         "deps": attrs.list(attrs.dep()),
         "_js_runtime": attrs.dep(default = "toolchains//:js"),
         "_run_eslint": attrs.source(default = "//rules/js:run_eslint.mjs"),
-    }
+    },
+    impl = _eslint_check_impl,
 )

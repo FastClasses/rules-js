@@ -64,20 +64,33 @@ async fn main() -> Result<()> {
             let parser = parsers::detect_parser(lockfile);
             let lf = parser.parse(lockfile, &npmrc)?;
             let packages = filter_packages(lf.packages, production);
-            println!("Parsed {} lockfile v{} with {} packages", lf.manager, lf.version, packages.len());
+            println!(
+                "Parsed {} lockfile v{} with {} packages",
+                lf.manager,
+                lf.version,
+                packages.len()
+            );
 
             if cfg.vendor.clean_stale {
                 vendor::clean_stale_vendors(&packages, &vendor_dir)?;
             }
             vendor::vendor_packages(&packages, &vendor_dir, &npmrc, cfg.vendor.parallel).await?;
         }
-        Commands::Buckify { lockfile, rules_path } => {
+        Commands::Buckify {
+            lockfile,
+            rules_path,
+        } => {
             let lockfile = lockfile.as_deref().unwrap_or(&cfg.lockfile);
             let rules_path = rules_path.as_deref().unwrap_or(&cfg.buck.rules_path);
             let parser = parsers::detect_parser(lockfile);
             let lf = parser.parse(lockfile, &npmrc)?;
             let packages = filter_packages(lf.packages, production);
-            println!("Parsed {} lockfile v{} with {} packages", lf.manager, lf.version, packages.len());
+            println!(
+                "Parsed {} lockfile v{} with {} packages",
+                lf.manager,
+                lf.version,
+                packages.len()
+            );
 
             let mut dep_graph = graph::DepGraph::build(&packages);
             let broken = dep_graph.detect_and_break_cycles();
@@ -97,7 +110,12 @@ async fn main() -> Result<()> {
             let parser = parsers::detect_parser(lockfile);
             let lf = parser.parse(lockfile, &npmrc)?;
             let packages = filter_packages(lf.packages, production);
-            println!("Parsed {} lockfile v{} with {} packages", lf.manager, lf.version, packages.len());
+            println!(
+                "Parsed {} lockfile v{} with {} packages",
+                lf.manager,
+                lf.version,
+                packages.len()
+            );
 
             if cfg.vendor.clean_stale {
                 vendor::clean_stale_vendors(&packages, &vendor_dir)?;
@@ -121,7 +139,10 @@ async fn main() -> Result<()> {
     Ok(())
 }
 
-fn filter_packages(packages: Vec<lockfile::PackageInfo>, production: bool) -> Vec<lockfile::PackageInfo> {
+fn filter_packages(
+    packages: Vec<lockfile::PackageInfo>,
+    production: bool,
+) -> Vec<lockfile::PackageInfo> {
     if production {
         packages.into_iter().filter(|p| !p.is_dev).collect()
     } else {

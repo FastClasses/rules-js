@@ -2,7 +2,7 @@ use petgraph::algo::kosaraju_scc;
 use petgraph::graph::{DiGraph, NodeIndex};
 use std::collections::HashMap;
 
-use crate::lockfile::{sanitize_target_name, PackageInfo};
+use crate::lockfile::{PackageInfo, sanitize_target_name};
 
 #[derive(Debug)]
 pub struct BrokenEdge {

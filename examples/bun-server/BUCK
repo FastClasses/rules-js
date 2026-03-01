@@ -1,16 +1,19 @@
-load("//rules/js:js_test.bzl", "js_test")
 load("//rules/js:js_run.bzl", "js_run")
+load("//rules/js:js_test.bzl", "js_test")
 
 js_run(
     name = "start",
+    srcs = ["server.js"],
     entry = "server.js",
     js_runtime = "toolchains//:bun_info",
-    srcs = ["server.js"],
 )
 
 js_test(
     name = "test",
+    srcs = [
+        "server.js",
+        "server.test.js",
+    ],
     entry = "server.test.js",
     js_runtime = "toolchains//:bun_info",
-    srcs = ["server.test.js", "server.js"],
 )

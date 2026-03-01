@@ -4,345 +4,313 @@ load("//rules/js:js_library.bzl", "js_library")
 js_library(
     name = "esbuild_aix-ppc64_0.27.3",
     package_name = "@esbuild/aix-ppc64",
-    version = "0.27.3",
     srcs = glob(["esbuild_aix-ppc64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_android-arm64_0.27.3",
     package_name = "@esbuild/android-arm64",
-    version = "0.27.3",
     srcs = glob(["esbuild_android-arm64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_android-arm_0.27.3",
     package_name = "@esbuild/android-arm",
-    version = "0.27.3",
     srcs = glob(["esbuild_android-arm_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_android-x64_0.27.3",
     package_name = "@esbuild/android-x64",
-    version = "0.27.3",
     srcs = glob(["esbuild_android-x64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_darwin-arm64_0.27.3",
     package_name = "@esbuild/darwin-arm64",
-    version = "0.27.3",
     srcs = glob(["esbuild_darwin-arm64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_darwin-x64_0.27.3",
     package_name = "@esbuild/darwin-x64",
-    version = "0.27.3",
     srcs = glob(["esbuild_darwin-x64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_freebsd-arm64_0.27.3",
     package_name = "@esbuild/freebsd-arm64",
-    version = "0.27.3",
     srcs = glob(["esbuild_freebsd-arm64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_freebsd-x64_0.27.3",
     package_name = "@esbuild/freebsd-x64",
-    version = "0.27.3",
     srcs = glob(["esbuild_freebsd-x64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_linux-arm64_0.27.3",
     package_name = "@esbuild/linux-arm64",
-    version = "0.27.3",
     srcs = glob(["esbuild_linux-arm64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_linux-arm_0.27.3",
     package_name = "@esbuild/linux-arm",
-    version = "0.27.3",
     srcs = glob(["esbuild_linux-arm_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_linux-ia32_0.27.3",
     package_name = "@esbuild/linux-ia32",
-    version = "0.27.3",
     srcs = glob(["esbuild_linux-ia32_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_linux-loong64_0.27.3",
     package_name = "@esbuild/linux-loong64",
-    version = "0.27.3",
     srcs = glob(["esbuild_linux-loong64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_linux-mips64el_0.27.3",
     package_name = "@esbuild/linux-mips64el",
-    version = "0.27.3",
     srcs = glob(["esbuild_linux-mips64el_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_linux-ppc64_0.27.3",
     package_name = "@esbuild/linux-ppc64",
-    version = "0.27.3",
     srcs = glob(["esbuild_linux-ppc64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_linux-riscv64_0.27.3",
     package_name = "@esbuild/linux-riscv64",
-    version = "0.27.3",
     srcs = glob(["esbuild_linux-riscv64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_linux-s390x_0.27.3",
     package_name = "@esbuild/linux-s390x",
-    version = "0.27.3",
     srcs = glob(["esbuild_linux-s390x_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_linux-x64_0.27.3",
     package_name = "@esbuild/linux-x64",
-    version = "0.27.3",
     srcs = glob(["esbuild_linux-x64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_netbsd-arm64_0.27.3",
     package_name = "@esbuild/netbsd-arm64",
-    version = "0.27.3",
     srcs = glob(["esbuild_netbsd-arm64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_netbsd-x64_0.27.3",
     package_name = "@esbuild/netbsd-x64",
-    version = "0.27.3",
     srcs = glob(["esbuild_netbsd-x64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_openbsd-arm64_0.27.3",
     package_name = "@esbuild/openbsd-arm64",
-    version = "0.27.3",
     srcs = glob(["esbuild_openbsd-arm64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_openbsd-x64_0.27.3",
     package_name = "@esbuild/openbsd-x64",
-    version = "0.27.3",
     srcs = glob(["esbuild_openbsd-x64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_openharmony-arm64_0.27.3",
     package_name = "@esbuild/openharmony-arm64",
-    version = "0.27.3",
     srcs = glob(["esbuild_openharmony-arm64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_sunos-x64_0.27.3",
     package_name = "@esbuild/sunos-x64",
-    version = "0.27.3",
     srcs = glob(["esbuild_sunos-x64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_win32-arm64_0.27.3",
     package_name = "@esbuild/win32-arm64",
-    version = "0.27.3",
     srcs = glob(["esbuild_win32-arm64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_win32-ia32_0.27.3",
     package_name = "@esbuild/win32-ia32",
-    version = "0.27.3",
     srcs = glob(["esbuild_win32-ia32_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_win32-x64_0.27.3",
     package_name = "@esbuild/win32-x64",
-    version = "0.27.3",
     srcs = glob(["esbuild_win32-x64_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "eslint-community_eslint-utils_4.9.1",
     package_name = "@eslint-community/eslint-utils",
-    version = "4.9.1",
     srcs = glob(["eslint-community_eslint-utils_4.9.1/**"]),
-    deps = [
-        ":eslint_9.39.3",
-        ":eslint-visitor-keys_3.4.3",
-    ],
+    version = "4.9.1",
     visibility = ["PUBLIC"],
+    deps = [
+        ":eslint-visitor-keys_3.4.3",
+        ":eslint_9.39.3",
+    ],
 )
-
 
 js_library(
     name = "eslint-community_regexpp_4.12.2",
     package_name = "@eslint-community/regexpp",
-    version = "4.12.2",
     srcs = glob(["eslint-community_regexpp_4.12.2/**"]),
-    deps = [],
+    version = "4.12.2",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "eslint_compat_2.0.2",
     package_name = "@eslint/compat",
-    version = "2.0.2",
     srcs = glob(["eslint_compat_2.0.2/**"]),
-    deps = [":eslint_core_1.1.0"],
+    version = "2.0.2",
     visibility = ["PUBLIC"],
+    deps = [":eslint_core_1.1.0"],
 )
-
 
 js_library(
     name = "eslint_config-array_0.21.1",
     package_name = "@eslint/config-array",
-    version = "0.21.1",
     srcs = glob(["eslint_config-array_0.21.1/**"]),
+    version = "0.21.1",
+    visibility = ["PUBLIC"],
     deps = [
-        ":eslint_object-schema_2.1.7",
         ":debug_4.4.3",
+        ":eslint_object-schema_2.1.7",
         ":minimatch_3.1.5",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "eslint_config-helpers_0.4.2",
     package_name = "@eslint/config-helpers",
-    version = "0.4.2",
     srcs = glob(["eslint_config-helpers_0.4.2/**"]),
-    deps = [":eslint_core_0.17.0"],
+    version = "0.4.2",
     visibility = ["PUBLIC"],
+    deps = [":eslint_core_0.17.0"],
 )
-
 
 js_library(
     name = "eslint_core_0.17.0",
     package_name = "@eslint/core",
-    version = "0.17.0",
     srcs = glob(["eslint_core_0.17.0/**"]),
-    deps = [":types_json-schema_7.0.15"],
+    version = "0.17.0",
     visibility = ["PUBLIC"],
+    deps = [":types_json-schema_7.0.15"],
 )
-
 
 js_library(
     name = "eslint_core_1.1.0",
     package_name = "@eslint/core",
-    version = "1.1.0",
     srcs = glob(["eslint_core_1.1.0/**"]),
-    deps = [":types_json-schema_7.0.15"],
+    version = "1.1.0",
     visibility = ["PUBLIC"],
+    deps = [":types_json-schema_7.0.15"],
 )
-
 
 js_library(
     name = "eslint_eslintrc_3.3.4",
     package_name = "@eslint/eslintrc",
-    version = "3.3.4",
     srcs = glob(["eslint_eslintrc_3.3.4/**"]),
+    version = "3.3.4",
+    visibility = ["PUBLIC"],
     deps = [
         ":ajv_6.14.0",
         ":debug_4.4.3",
@@ -354,445 +322,399 @@ js_library(
         ":minimatch_3.1.5",
         ":strip-json-comments_3.1.1",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "eslint_js_9.39.3",
     package_name = "@eslint/js",
-    version = "9.39.3",
     srcs = glob(["eslint_js_9.39.3/**"]),
-    deps = [],
+    version = "9.39.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "eslint_object-schema_2.1.7",
     package_name = "@eslint/object-schema",
-    version = "2.1.7",
     srcs = glob(["eslint_object-schema_2.1.7/**"]),
-    deps = [],
+    version = "2.1.7",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "eslint_plugin-kit_0.4.1",
     package_name = "@eslint/plugin-kit",
-    version = "0.4.1",
     srcs = glob(["eslint_plugin-kit_0.4.1/**"]),
+    version = "0.4.1",
+    visibility = ["PUBLIC"],
     deps = [
         ":eslint_core_0.17.0",
         ":levn_0.4.1",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "humanfs_core_0.19.1",
     package_name = "@humanfs/core",
-    version = "0.19.1",
     srcs = glob(["humanfs_core_0.19.1/**"]),
-    deps = [],
+    version = "0.19.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "humanfs_node_0.16.7",
     package_name = "@humanfs/node",
-    version = "0.16.7",
     srcs = glob(["humanfs_node_0.16.7/**"]),
+    version = "0.16.7",
+    visibility = ["PUBLIC"],
     deps = [
         ":humanfs_core_0.19.1",
         ":humanwhocodes_retry_0.4.3",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "humanwhocodes_module-importer_1.0.1",
     package_name = "@humanwhocodes/module-importer",
-    version = "1.0.1",
     srcs = glob(["humanwhocodes_module-importer_1.0.1/**"]),
-    deps = [],
+    version = "1.0.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "humanwhocodes_retry_0.4.3",
     package_name = "@humanwhocodes/retry",
-    version = "0.4.3",
     srcs = glob(["humanwhocodes_retry_0.4.3/**"]),
-    deps = [],
+    version = "0.4.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "jridgewell_gen-mapping_0.3.13",
     package_name = "@jridgewell/gen-mapping",
-    version = "0.3.13",
     srcs = glob(["jridgewell_gen-mapping_0.3.13/**"]),
+    version = "0.3.13",
+    visibility = ["PUBLIC"],
     deps = [
         ":jridgewell_sourcemap-codec_1.5.5",
         ":jridgewell_trace-mapping_0.3.31",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "jridgewell_remapping_2.3.5",
     package_name = "@jridgewell/remapping",
-    version = "2.3.5",
     srcs = glob(["jridgewell_remapping_2.3.5/**"]),
+    version = "2.3.5",
+    visibility = ["PUBLIC"],
     deps = [
         ":jridgewell_gen-mapping_0.3.13",
         ":jridgewell_trace-mapping_0.3.31",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "jridgewell_resolve-uri_3.1.2",
     package_name = "@jridgewell/resolve-uri",
-    version = "3.1.2",
     srcs = glob(["jridgewell_resolve-uri_3.1.2/**"]),
-    deps = [],
+    version = "3.1.2",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "jridgewell_sourcemap-codec_1.5.5",
     package_name = "@jridgewell/sourcemap-codec",
-    version = "1.5.5",
     srcs = glob(["jridgewell_sourcemap-codec_1.5.5/**"]),
-    deps = [],
+    version = "1.5.5",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "jridgewell_trace-mapping_0.3.31",
     package_name = "@jridgewell/trace-mapping",
-    version = "0.3.31",
     srcs = glob(["jridgewell_trace-mapping_0.3.31/**"]),
+    version = "0.3.31",
+    visibility = ["PUBLIC"],
     deps = [
         ":jridgewell_resolve-uri_3.1.2",
         ":jridgewell_sourcemap-codec_1.5.5",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "polka_url_1.0.0-next.29",
     package_name = "@polka/url",
-    version = "1.0.0-next.29",
     srcs = glob(["polka_url_1.0.0-next.29/**"]),
-    deps = [],
+    version = "1.0.0-next.29",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-android-arm-eabi_4.59.0",
     package_name = "@rollup/rollup-android-arm-eabi",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-android-arm-eabi_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-android-arm64_4.59.0",
     package_name = "@rollup/rollup-android-arm64",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-android-arm64_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-darwin-arm64_4.59.0",
     package_name = "@rollup/rollup-darwin-arm64",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-darwin-arm64_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-darwin-x64_4.59.0",
     package_name = "@rollup/rollup-darwin-x64",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-darwin-x64_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-freebsd-arm64_4.59.0",
     package_name = "@rollup/rollup-freebsd-arm64",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-freebsd-arm64_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-freebsd-x64_4.59.0",
     package_name = "@rollup/rollup-freebsd-x64",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-freebsd-x64_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-linux-arm-gnueabihf_4.59.0",
     package_name = "@rollup/rollup-linux-arm-gnueabihf",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-linux-arm-gnueabihf_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-linux-arm-musleabihf_4.59.0",
     package_name = "@rollup/rollup-linux-arm-musleabihf",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-linux-arm-musleabihf_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-linux-arm64-gnu_4.59.0",
     package_name = "@rollup/rollup-linux-arm64-gnu",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-linux-arm64-gnu_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-linux-arm64-musl_4.59.0",
     package_name = "@rollup/rollup-linux-arm64-musl",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-linux-arm64-musl_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-linux-loong64-gnu_4.59.0",
     package_name = "@rollup/rollup-linux-loong64-gnu",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-linux-loong64-gnu_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-linux-loong64-musl_4.59.0",
     package_name = "@rollup/rollup-linux-loong64-musl",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-linux-loong64-musl_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-linux-ppc64-gnu_4.59.0",
     package_name = "@rollup/rollup-linux-ppc64-gnu",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-linux-ppc64-gnu_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-linux-ppc64-musl_4.59.0",
     package_name = "@rollup/rollup-linux-ppc64-musl",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-linux-ppc64-musl_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-linux-riscv64-gnu_4.59.0",
     package_name = "@rollup/rollup-linux-riscv64-gnu",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-linux-riscv64-gnu_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-linux-riscv64-musl_4.59.0",
     package_name = "@rollup/rollup-linux-riscv64-musl",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-linux-riscv64-musl_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-linux-s390x-gnu_4.59.0",
     package_name = "@rollup/rollup-linux-s390x-gnu",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-linux-s390x-gnu_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-linux-x64-gnu_4.59.0",
     package_name = "@rollup/rollup-linux-x64-gnu",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-linux-x64-gnu_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-linux-x64-musl_4.59.0",
     package_name = "@rollup/rollup-linux-x64-musl",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-linux-x64-musl_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-openbsd-x64_4.59.0",
     package_name = "@rollup/rollup-openbsd-x64",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-openbsd-x64_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-openharmony-arm64_4.59.0",
     package_name = "@rollup/rollup-openharmony-arm64",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-openharmony-arm64_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-win32-arm64-msvc_4.59.0",
     package_name = "@rollup/rollup-win32-arm64-msvc",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-win32-arm64-msvc_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-win32-ia32-msvc_4.59.0",
     package_name = "@rollup/rollup-win32-ia32-msvc",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-win32-ia32-msvc_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-win32-x64-gnu_4.59.0",
     package_name = "@rollup/rollup-win32-x64-gnu",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-win32-x64-gnu_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_rollup-win32-x64-msvc_4.59.0",
     package_name = "@rollup/rollup-win32-x64-msvc",
-    version = "4.59.0",
     srcs = glob(["rollup_rollup-win32-x64-msvc_4.59.0/**"]),
-    deps = [],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "standard-schema_spec_1.1.0",
     package_name = "@standard-schema/spec",
-    version = "1.1.0",
     srcs = glob(["standard-schema_spec_1.1.0/**"]),
-    deps = [],
+    version = "1.1.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "sveltejs_acorn-typescript_1.0.9",
     package_name = "@sveltejs/acorn-typescript",
-    version = "1.0.9",
     srcs = glob(["sveltejs_acorn-typescript_1.0.9/**"]),
-    deps = [":acorn_8.16.0"],
+    version = "1.0.9",
     visibility = ["PUBLIC"],
+    deps = [":acorn_8.16.0"],
 )
-
 
 js_library(
     name = "sveltejs_adapter-auto_7.0.1",
     package_name = "@sveltejs/adapter-auto",
-    version = "7.0.1",
     srcs = glob(["sveltejs_adapter-auto_7.0.1/**"]),
-    deps = [":sveltejs_kit_2.53.4"],
+    version = "7.0.1",
     visibility = ["PUBLIC"],
+    deps = [":sveltejs_kit_2.53.4"],
 )
-
 
 js_library(
     name = "sveltejs_kit_2.53.4",
     package_name = "@sveltejs/kit",
-    version = "2.53.4",
     srcs = glob(["sveltejs_kit_2.53.4/**"]),
+    version = "2.53.4",
+    visibility = ["PUBLIC"],
     deps = [
-        ":standard-schema_spec_1.1.0",
-        ":sveltejs_acorn-typescript_1.0.9",
-        ":sveltejs_vite-plugin-svelte_6.2.4",
-        ":types_cookie_0.6.0",
         ":acorn_8.16.0",
         ":cookie_0.6.0",
         ":devalue_5.6.3",
@@ -802,33 +724,35 @@ js_library(
         ":mrmime_2.0.1",
         ":set-cookie-parser_3.0.1",
         ":sirv_3.0.2",
+        ":standard-schema_spec_1.1.0",
         ":svelte_5.53.6",
+        ":sveltejs_acorn-typescript_1.0.9",
+        ":sveltejs_vite-plugin-svelte_6.2.4",
+        ":types_cookie_0.6.0",
         ":vite_7.3.1",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "sveltejs_vite-plugin-svelte-inspector_5.0.2",
     package_name = "@sveltejs/vite-plugin-svelte-inspector",
-    version = "5.0.2",
     srcs = glob(["sveltejs_vite-plugin-svelte-inspector_5.0.2/**"]),
+    version = "5.0.2",
+    visibility = ["PUBLIC"],
     deps = [
-        ":sveltejs_vite-plugin-svelte_6.2.4",
         ":obug_2.1.1",
         ":svelte_5.53.6",
+        ":sveltejs_vite-plugin-svelte_6.2.4",
         ":vite_7.3.1",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "sveltejs_vite-plugin-svelte_6.2.4",
     package_name = "@sveltejs/vite-plugin-svelte",
-    version = "6.2.4",
     srcs = glob(["sveltejs_vite-plugin-svelte_6.2.4/**"]),
+    version = "6.2.4",
+    visibility = ["PUBLIC"],
     deps = [
         ":deepmerge_4.3.1",
         ":magic-string_0.30.21",
@@ -837,602 +761,549 @@ js_library(
         ":vite_7.3.1",
         ":vitefu_1.1.2",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "types_cookie_0.6.0",
     package_name = "@types/cookie",
-    version = "0.6.0",
     srcs = glob(["types_cookie_0.6.0/**"]),
-    deps = [],
+    version = "0.6.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "types_estree_1.0.8",
     package_name = "@types/estree",
-    version = "1.0.8",
     srcs = glob(["types_estree_1.0.8/**"]),
-    deps = [],
+    version = "1.0.8",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "types_json-schema_7.0.15",
     package_name = "@types/json-schema",
-    version = "7.0.15",
     srcs = glob(["types_json-schema_7.0.15/**"]),
-    deps = [],
+    version = "7.0.15",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "types_node_22.19.13",
     package_name = "@types/node",
-    version = "22.19.13",
     srcs = glob(["types_node_22.19.13/**"]),
-    deps = [":undici-types_6.21.0"],
+    version = "22.19.13",
     visibility = ["PUBLIC"],
+    deps = [":undici-types_6.21.0"],
 )
-
 
 js_library(
     name = "types_trusted-types_2.0.7",
     package_name = "@types/trusted-types",
-    version = "2.0.7",
     srcs = glob(["types_trusted-types_2.0.7/**"]),
-    deps = [],
+    version = "2.0.7",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "typescript-eslint_eslint-plugin_8.56.1",
     package_name = "@typescript-eslint/eslint-plugin",
-    version = "8.56.1",
     srcs = glob(["typescript-eslint_eslint-plugin_8.56.1/**"]),
+    version = "8.56.1",
+    visibility = ["PUBLIC"],
     deps = [
         ":eslint-community_regexpp_4.12.2",
+        ":eslint_9.39.3",
+        ":ignore_7.0.5",
+        ":natural-compare_1.4.0",
+        ":ts-api-utils_2.4.0",
         ":typescript-eslint_parser_8.56.1",
         ":typescript-eslint_scope-manager_8.56.1",
         ":typescript-eslint_type-utils_8.56.1",
         ":typescript-eslint_utils_8.56.1",
         ":typescript-eslint_visitor-keys_8.56.1",
-        ":eslint_9.39.3",
-        ":ignore_7.0.5",
-        ":natural-compare_1.4.0",
-        ":ts-api-utils_2.4.0",
         ":typescript_5.9.3",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "typescript-eslint_parser_8.56.1",
     package_name = "@typescript-eslint/parser",
-    version = "8.56.1",
     srcs = glob(["typescript-eslint_parser_8.56.1/**"]),
+    version = "8.56.1",
+    visibility = ["PUBLIC"],
     deps = [
+        ":debug_4.4.3",
+        ":eslint_9.39.3",
         ":typescript-eslint_scope-manager_8.56.1",
         ":typescript-eslint_types_8.56.1",
         ":typescript-eslint_typescript-estree_8.56.1",
         ":typescript-eslint_visitor-keys_8.56.1",
-        ":debug_4.4.3",
-        ":eslint_9.39.3",
         ":typescript_5.9.3",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "typescript-eslint_project-service_8.56.1",
     package_name = "@typescript-eslint/project-service",
-    version = "8.56.1",
     srcs = glob(["typescript-eslint_project-service_8.56.1/**"]),
+    version = "8.56.1",
+    visibility = ["PUBLIC"],
     deps = [
+        ":debug_4.4.3",
         ":typescript-eslint_tsconfig-utils_8.56.1",
         ":typescript-eslint_types_8.56.1",
-        ":debug_4.4.3",
         ":typescript_5.9.3",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "typescript-eslint_scope-manager_8.56.1",
     package_name = "@typescript-eslint/scope-manager",
-    version = "8.56.1",
     srcs = glob(["typescript-eslint_scope-manager_8.56.1/**"]),
+    version = "8.56.1",
+    visibility = ["PUBLIC"],
     deps = [
         ":typescript-eslint_types_8.56.1",
         ":typescript-eslint_visitor-keys_8.56.1",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "typescript-eslint_tsconfig-utils_8.56.1",
     package_name = "@typescript-eslint/tsconfig-utils",
-    version = "8.56.1",
     srcs = glob(["typescript-eslint_tsconfig-utils_8.56.1/**"]),
-    deps = [":typescript_5.9.3"],
+    version = "8.56.1",
     visibility = ["PUBLIC"],
+    deps = [":typescript_5.9.3"],
 )
-
 
 js_library(
     name = "typescript-eslint_type-utils_8.56.1",
     package_name = "@typescript-eslint/type-utils",
-    version = "8.56.1",
     srcs = glob(["typescript-eslint_type-utils_8.56.1/**"]),
+    version = "8.56.1",
+    visibility = ["PUBLIC"],
     deps = [
-        ":typescript-eslint_types_8.56.1",
-        ":typescript-eslint_typescript-estree_8.56.1",
-        ":typescript-eslint_utils_8.56.1",
         ":debug_4.4.3",
         ":eslint_9.39.3",
         ":ts-api-utils_2.4.0",
+        ":typescript-eslint_types_8.56.1",
+        ":typescript-eslint_typescript-estree_8.56.1",
+        ":typescript-eslint_utils_8.56.1",
         ":typescript_5.9.3",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "typescript-eslint_types_8.56.1",
     package_name = "@typescript-eslint/types",
-    version = "8.56.1",
     srcs = glob(["typescript-eslint_types_8.56.1/**"]),
-    deps = [],
+    version = "8.56.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "typescript-eslint_typescript-estree_8.56.1",
     package_name = "@typescript-eslint/typescript-estree",
-    version = "8.56.1",
     srcs = glob(["typescript-eslint_typescript-estree_8.56.1/**"]),
+    version = "8.56.1",
+    visibility = ["PUBLIC"],
     deps = [
-        ":typescript-eslint_project-service_8.56.1",
-        ":typescript-eslint_tsconfig-utils_8.56.1",
-        ":typescript-eslint_types_8.56.1",
-        ":typescript-eslint_visitor-keys_8.56.1",
         ":debug_4.4.3",
         ":minimatch_10.2.4",
         ":semver_7.7.4",
         ":tinyglobby_0.2.15",
         ":ts-api-utils_2.4.0",
+        ":typescript-eslint_project-service_8.56.1",
+        ":typescript-eslint_tsconfig-utils_8.56.1",
+        ":typescript-eslint_types_8.56.1",
+        ":typescript-eslint_visitor-keys_8.56.1",
         ":typescript_5.9.3",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "typescript-eslint_utils_8.56.1",
     package_name = "@typescript-eslint/utils",
-    version = "8.56.1",
     srcs = glob(["typescript-eslint_utils_8.56.1/**"]),
+    version = "8.56.1",
+    visibility = ["PUBLIC"],
     deps = [
         ":eslint-community_eslint-utils_4.9.1",
+        ":eslint_9.39.3",
         ":typescript-eslint_scope-manager_8.56.1",
         ":typescript-eslint_types_8.56.1",
         ":typescript-eslint_typescript-estree_8.56.1",
-        ":eslint_9.39.3",
         ":typescript_5.9.3",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "typescript-eslint_visitor-keys_8.56.1",
     package_name = "@typescript-eslint/visitor-keys",
-    version = "8.56.1",
     srcs = glob(["typescript-eslint_visitor-keys_8.56.1/**"]),
-    deps = [
-        ":typescript-eslint_types_8.56.1",
-        ":eslint-visitor-keys_5.0.1",
-    ],
+    version = "8.56.1",
     visibility = ["PUBLIC"],
+    deps = [
+        ":eslint-visitor-keys_5.0.1",
+        ":typescript-eslint_types_8.56.1",
+    ],
 )
-
 
 js_library(
     name = "acorn-jsx_5.3.2",
     package_name = "acorn-jsx",
-    version = "5.3.2",
     srcs = glob(["acorn-jsx_5.3.2/**"]),
-    deps = [":acorn_8.16.0"],
+    version = "5.3.2",
     visibility = ["PUBLIC"],
+    deps = [":acorn_8.16.0"],
 )
-
 
 js_library(
     name = "acorn_8.16.0",
     package_name = "acorn",
-    version = "8.16.0",
     srcs = glob(["acorn_8.16.0/**"]),
-    deps = [],
+    version = "8.16.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "ajv_6.14.0",
     package_name = "ajv",
-    version = "6.14.0",
     srcs = glob(["ajv_6.14.0/**"]),
+    version = "6.14.0",
+    visibility = ["PUBLIC"],
     deps = [
         ":fast-deep-equal_3.1.3",
         ":fast-json-stable-stringify_2.1.0",
         ":json-schema-traverse_0.4.1",
         ":uri-js_4.4.1",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "ansi-styles_4.3.0",
     package_name = "ansi-styles",
-    version = "4.3.0",
     srcs = glob(["ansi-styles_4.3.0/**"]),
-    deps = [":color-convert_2.0.1"],
+    version = "4.3.0",
     visibility = ["PUBLIC"],
+    deps = [":color-convert_2.0.1"],
 )
-
 
 js_library(
     name = "argparse_2.0.1",
     package_name = "argparse",
-    version = "2.0.1",
     srcs = glob(["argparse_2.0.1/**"]),
-    deps = [],
+    version = "2.0.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "aria-query_5.3.1",
     package_name = "aria-query",
-    version = "5.3.1",
     srcs = glob(["aria-query_5.3.1/**"]),
-    deps = [],
+    version = "5.3.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "axobject-query_4.1.0",
     package_name = "axobject-query",
-    version = "4.1.0",
     srcs = glob(["axobject-query_4.1.0/**"]),
-    deps = [],
+    version = "4.1.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "balanced-match_1.0.2",
     package_name = "balanced-match",
-    version = "1.0.2",
     srcs = glob(["balanced-match_1.0.2/**"]),
-    deps = [],
+    version = "1.0.2",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "balanced-match_4.0.4",
     package_name = "balanced-match",
-    version = "4.0.4",
     srcs = glob(["balanced-match_4.0.4/**"]),
-    deps = [],
+    version = "4.0.4",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "brace-expansion_1.1.12",
     package_name = "brace-expansion",
-    version = "1.1.12",
     srcs = glob(["brace-expansion_1.1.12/**"]),
+    version = "1.1.12",
+    visibility = ["PUBLIC"],
     deps = [
         ":balanced-match_1.0.2",
         ":concat-map_0.0.1",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "brace-expansion_5.0.4",
     package_name = "brace-expansion",
-    version = "5.0.4",
     srcs = glob(["brace-expansion_5.0.4/**"]),
-    deps = [":balanced-match_4.0.4"],
+    version = "5.0.4",
     visibility = ["PUBLIC"],
+    deps = [":balanced-match_4.0.4"],
 )
-
 
 js_library(
     name = "callsites_3.1.0",
     package_name = "callsites",
-    version = "3.1.0",
     srcs = glob(["callsites_3.1.0/**"]),
-    deps = [],
+    version = "3.1.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "chalk_4.1.2",
     package_name = "chalk",
-    version = "4.1.2",
     srcs = glob(["chalk_4.1.2/**"]),
+    version = "4.1.2",
+    visibility = ["PUBLIC"],
     deps = [
         ":ansi-styles_4.3.0",
         ":supports-color_7.2.0",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "chokidar_4.0.3",
     package_name = "chokidar",
-    version = "4.0.3",
     srcs = glob(["chokidar_4.0.3/**"]),
-    deps = [":readdirp_4.1.2"],
+    version = "4.0.3",
     visibility = ["PUBLIC"],
+    deps = [":readdirp_4.1.2"],
 )
-
 
 js_library(
     name = "clsx_2.1.1",
     package_name = "clsx",
-    version = "2.1.1",
     srcs = glob(["clsx_2.1.1/**"]),
-    deps = [],
+    version = "2.1.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "color-convert_2.0.1",
     package_name = "color-convert",
-    version = "2.0.1",
     srcs = glob(["color-convert_2.0.1/**"]),
-    deps = [":color-name_1.1.4"],
+    version = "2.0.1",
     visibility = ["PUBLIC"],
+    deps = [":color-name_1.1.4"],
 )
-
 
 js_library(
     name = "color-name_1.1.4",
     package_name = "color-name",
-    version = "1.1.4",
     srcs = glob(["color-name_1.1.4/**"]),
-    deps = [],
+    version = "1.1.4",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "concat-map_0.0.1",
     package_name = "concat-map",
-    version = "0.0.1",
     srcs = glob(["concat-map_0.0.1/**"]),
-    deps = [],
+    version = "0.0.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "cookie_0.6.0",
     package_name = "cookie",
-    version = "0.6.0",
     srcs = glob(["cookie_0.6.0/**"]),
-    deps = [],
+    version = "0.6.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "cross-spawn_7.0.6",
     package_name = "cross-spawn",
-    version = "7.0.6",
     srcs = glob(["cross-spawn_7.0.6/**"]),
+    version = "7.0.6",
+    visibility = ["PUBLIC"],
     deps = [
         ":path-key_3.1.1",
         ":shebang-command_2.0.0",
         ":which_2.0.2",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "cssesc_3.0.0",
     package_name = "cssesc",
-    version = "3.0.0",
     srcs = glob(["cssesc_3.0.0/**"]),
-    deps = [],
+    version = "3.0.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "debug_4.4.3",
     package_name = "debug",
-    version = "4.4.3",
     srcs = glob(["debug_4.4.3/**"]),
-    deps = [":ms_2.1.3"],
+    version = "4.4.3",
     visibility = ["PUBLIC"],
+    deps = [":ms_2.1.3"],
 )
-
 
 js_library(
     name = "deep-is_0.1.4",
     package_name = "deep-is",
-    version = "0.1.4",
     srcs = glob(["deep-is_0.1.4/**"]),
-    deps = [],
+    version = "0.1.4",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "deepmerge_4.3.1",
     package_name = "deepmerge",
-    version = "4.3.1",
     srcs = glob(["deepmerge_4.3.1/**"]),
-    deps = [],
+    version = "4.3.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "devalue_5.6.3",
     package_name = "devalue",
-    version = "5.6.3",
     srcs = glob(["devalue_5.6.3/**"]),
-    deps = [],
+    version = "5.6.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esbuild_0.27.3",
     package_name = "esbuild",
-    version = "0.27.3",
     srcs = glob(["esbuild_0.27.3/**"]),
-    deps = [],
+    version = "0.27.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "escape-string-regexp_4.0.0",
     package_name = "escape-string-regexp",
-    version = "4.0.0",
     srcs = glob(["escape-string-regexp_4.0.0/**"]),
-    deps = [],
+    version = "4.0.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "eslint-config-prettier_10.1.8",
     package_name = "eslint-config-prettier",
-    version = "10.1.8",
     srcs = glob(["eslint-config-prettier_10.1.8/**"]),
-    deps = [":eslint_9.39.3"],
+    version = "10.1.8",
     visibility = ["PUBLIC"],
+    deps = [":eslint_9.39.3"],
 )
-
 
 js_library(
     name = "eslint-plugin-svelte_3.15.0",
     package_name = "eslint-plugin-svelte",
-    version = "3.15.0",
     srcs = glob(["eslint-plugin-svelte_3.15.0/**"]),
+    version = "3.15.0",
+    visibility = ["PUBLIC"],
     deps = [
         ":eslint-community_eslint-utils_4.9.1",
-        ":jridgewell_sourcemap-codec_1.5.5",
         ":eslint_9.39.3",
         ":esutils_2.0.3",
         ":globals_16.5.0",
+        ":jridgewell_sourcemap-codec_1.5.5",
         ":known-css-properties_0.37.0",
-        ":postcss_8.5.6",
         ":postcss-load-config_3.1.4",
         ":postcss-safe-parser_7.0.1",
+        ":postcss_8.5.6",
         ":semver_7.7.4",
         ":svelte-eslint-parser_1.5.1",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "eslint-scope_8.4.0",
     package_name = "eslint-scope",
-    version = "8.4.0",
     srcs = glob(["eslint-scope_8.4.0/**"]),
+    version = "8.4.0",
+    visibility = ["PUBLIC"],
     deps = [
         ":esrecurse_4.3.0",
         ":estraverse_5.3.0",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "eslint-visitor-keys_3.4.3",
     package_name = "eslint-visitor-keys",
-    version = "3.4.3",
     srcs = glob(["eslint-visitor-keys_3.4.3/**"]),
-    deps = [],
+    version = "3.4.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "eslint-visitor-keys_4.2.1",
     package_name = "eslint-visitor-keys",
-    version = "4.2.1",
     srcs = glob(["eslint-visitor-keys_4.2.1/**"]),
-    deps = [],
+    version = "4.2.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "eslint-visitor-keys_5.0.1",
     package_name = "eslint-visitor-keys",
-    version = "5.0.1",
     srcs = glob(["eslint-visitor-keys_5.0.1/**"]),
-    deps = [],
+    version = "5.0.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "eslint_9.39.3",
     package_name = "eslint",
-    version = "9.39.3",
     srcs = glob(["eslint_9.39.3/**"]),
+    version = "9.39.3",
+    visibility = ["PUBLIC"],
     deps = [
+        ":ajv_6.14.0",
+        ":chalk_4.1.2",
+        ":cross-spawn_7.0.6",
+        ":debug_4.4.3",
+        ":escape-string-regexp_4.0.0",
         ":eslint-community_eslint-utils_4.9.1",
         ":eslint-community_regexpp_4.12.2",
+        ":eslint-scope_8.4.0",
+        ":eslint-visitor-keys_4.2.1",
         ":eslint_config-array_0.21.1",
         ":eslint_config-helpers_0.4.2",
         ":eslint_core_0.17.0",
         ":eslint_eslintrc_3.3.4",
         ":eslint_js_9.39.3",
         ":eslint_plugin-kit_0.4.1",
-        ":humanfs_node_0.16.7",
-        ":humanwhocodes_module-importer_1.0.1",
-        ":humanwhocodes_retry_0.4.3",
-        ":types_estree_1.0.8",
-        ":ajv_6.14.0",
-        ":chalk_4.1.2",
-        ":cross-spawn_7.0.6",
-        ":debug_4.4.3",
-        ":escape-string-regexp_4.0.0",
-        ":eslint-scope_8.4.0",
-        ":eslint-visitor-keys_4.2.1",
         ":espree_10.4.0",
         ":esquery_1.7.0",
         ":esutils_2.0.3",
@@ -1440,6 +1311,9 @@ js_library(
         ":file-entry-cache_8.0.0",
         ":find-up_5.0.0",
         ":glob-parent_6.0.2",
+        ":humanfs_node_0.16.7",
+        ":humanwhocodes_module-importer_1.0.1",
+        ":humanwhocodes_retry_0.4.3",
         ":ignore_5.3.2",
         ":imurmurhash_0.1.4",
         ":is-glob_4.0.3",
@@ -1448,532 +1322,482 @@ js_library(
         ":minimatch_3.1.5",
         ":natural-compare_1.4.0",
         ":optionator_0.9.4",
+        ":types_estree_1.0.8",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "esm-env_1.2.2",
     package_name = "esm-env",
-    version = "1.2.2",
     srcs = glob(["esm-env_1.2.2/**"]),
-    deps = [],
+    version = "1.2.2",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "espree_10.4.0",
     package_name = "espree",
-    version = "10.4.0",
     srcs = glob(["espree_10.4.0/**"]),
+    version = "10.4.0",
+    visibility = ["PUBLIC"],
     deps = [
-        ":acorn_8.16.0",
         ":acorn-jsx_5.3.2",
+        ":acorn_8.16.0",
         ":eslint-visitor-keys_4.2.1",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "esquery_1.7.0",
     package_name = "esquery",
-    version = "1.7.0",
     srcs = glob(["esquery_1.7.0/**"]),
-    deps = [":estraverse_5.3.0"],
+    version = "1.7.0",
     visibility = ["PUBLIC"],
+    deps = [":estraverse_5.3.0"],
 )
-
 
 js_library(
     name = "esrap_2.2.3",
     package_name = "esrap",
-    version = "2.2.3",
     srcs = glob(["esrap_2.2.3/**"]),
-    deps = [":jridgewell_sourcemap-codec_1.5.5"],
+    version = "2.2.3",
     visibility = ["PUBLIC"],
+    deps = [":jridgewell_sourcemap-codec_1.5.5"],
 )
-
 
 js_library(
     name = "esrecurse_4.3.0",
     package_name = "esrecurse",
-    version = "4.3.0",
     srcs = glob(["esrecurse_4.3.0/**"]),
-    deps = [":estraverse_5.3.0"],
+    version = "4.3.0",
     visibility = ["PUBLIC"],
+    deps = [":estraverse_5.3.0"],
 )
-
 
 js_library(
     name = "estraverse_5.3.0",
     package_name = "estraverse",
-    version = "5.3.0",
     srcs = glob(["estraverse_5.3.0/**"]),
-    deps = [],
+    version = "5.3.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "esutils_2.0.3",
     package_name = "esutils",
-    version = "2.0.3",
     srcs = glob(["esutils_2.0.3/**"]),
-    deps = [],
+    version = "2.0.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "fast-deep-equal_3.1.3",
     package_name = "fast-deep-equal",
-    version = "3.1.3",
     srcs = glob(["fast-deep-equal_3.1.3/**"]),
-    deps = [],
+    version = "3.1.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "fast-json-stable-stringify_2.1.0",
     package_name = "fast-json-stable-stringify",
-    version = "2.1.0",
     srcs = glob(["fast-json-stable-stringify_2.1.0/**"]),
-    deps = [],
+    version = "2.1.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "fast-levenshtein_2.0.6",
     package_name = "fast-levenshtein",
-    version = "2.0.6",
     srcs = glob(["fast-levenshtein_2.0.6/**"]),
-    deps = [],
+    version = "2.0.6",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "fdir_6.5.0",
     package_name = "fdir",
-    version = "6.5.0",
     srcs = glob(["fdir_6.5.0/**"]),
-    deps = [],
+    version = "6.5.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "file-entry-cache_8.0.0",
     package_name = "file-entry-cache",
-    version = "8.0.0",
     srcs = glob(["file-entry-cache_8.0.0/**"]),
-    deps = [":flat-cache_4.0.1"],
+    version = "8.0.0",
     visibility = ["PUBLIC"],
+    deps = [":flat-cache_4.0.1"],
 )
-
 
 js_library(
     name = "find-up_5.0.0",
     package_name = "find-up",
-    version = "5.0.0",
     srcs = glob(["find-up_5.0.0/**"]),
+    version = "5.0.0",
+    visibility = ["PUBLIC"],
     deps = [
         ":locate-path_6.0.0",
         ":path-exists_4.0.0",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "flat-cache_4.0.1",
     package_name = "flat-cache",
-    version = "4.0.1",
     srcs = glob(["flat-cache_4.0.1/**"]),
+    version = "4.0.1",
+    visibility = ["PUBLIC"],
     deps = [
         ":flatted_3.3.3",
         ":keyv_4.5.4",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "flatted_3.3.3",
     package_name = "flatted",
-    version = "3.3.3",
     srcs = glob(["flatted_3.3.3/**"]),
-    deps = [],
+    version = "3.3.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "fsevents_2.3.3",
     package_name = "fsevents",
-    version = "2.3.3",
     srcs = glob(["fsevents_2.3.3/**"]),
-    deps = [],
+    version = "2.3.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "glob-parent_6.0.2",
     package_name = "glob-parent",
-    version = "6.0.2",
     srcs = glob(["glob-parent_6.0.2/**"]),
-    deps = [":is-glob_4.0.3"],
+    version = "6.0.2",
     visibility = ["PUBLIC"],
+    deps = [":is-glob_4.0.3"],
 )
-
 
 js_library(
     name = "globals_14.0.0",
     package_name = "globals",
-    version = "14.0.0",
     srcs = glob(["globals_14.0.0/**"]),
-    deps = [],
+    version = "14.0.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "globals_16.5.0",
     package_name = "globals",
-    version = "16.5.0",
     srcs = glob(["globals_16.5.0/**"]),
-    deps = [],
+    version = "16.5.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "globals_17.3.0",
     package_name = "globals",
-    version = "17.3.0",
     srcs = glob(["globals_17.3.0/**"]),
-    deps = [],
+    version = "17.3.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "has-flag_4.0.0",
     package_name = "has-flag",
-    version = "4.0.0",
     srcs = glob(["has-flag_4.0.0/**"]),
-    deps = [],
+    version = "4.0.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "ignore_5.3.2",
     package_name = "ignore",
-    version = "5.3.2",
     srcs = glob(["ignore_5.3.2/**"]),
-    deps = [],
+    version = "5.3.2",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "ignore_7.0.5",
     package_name = "ignore",
-    version = "7.0.5",
     srcs = glob(["ignore_7.0.5/**"]),
-    deps = [],
+    version = "7.0.5",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "import-fresh_3.3.1",
     package_name = "import-fresh",
-    version = "3.3.1",
     srcs = glob(["import-fresh_3.3.1/**"]),
+    version = "3.3.1",
+    visibility = ["PUBLIC"],
     deps = [
         ":parent-module_1.0.1",
         ":resolve-from_4.0.0",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "imurmurhash_0.1.4",
     package_name = "imurmurhash",
-    version = "0.1.4",
     srcs = glob(["imurmurhash_0.1.4/**"]),
-    deps = [],
+    version = "0.1.4",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "is-extglob_2.1.1",
     package_name = "is-extglob",
-    version = "2.1.1",
     srcs = glob(["is-extglob_2.1.1/**"]),
-    deps = [],
+    version = "2.1.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "is-glob_4.0.3",
     package_name = "is-glob",
-    version = "4.0.3",
     srcs = glob(["is-glob_4.0.3/**"]),
-    deps = [":is-extglob_2.1.1"],
+    version = "4.0.3",
     visibility = ["PUBLIC"],
+    deps = [":is-extglob_2.1.1"],
 )
-
 
 js_library(
     name = "is-reference_3.0.3",
     package_name = "is-reference",
-    version = "3.0.3",
     srcs = glob(["is-reference_3.0.3/**"]),
-    deps = [":types_estree_1.0.8"],
+    version = "3.0.3",
     visibility = ["PUBLIC"],
+    deps = [":types_estree_1.0.8"],
 )
-
 
 js_library(
     name = "isexe_2.0.0",
     package_name = "isexe",
-    version = "2.0.0",
     srcs = glob(["isexe_2.0.0/**"]),
-    deps = [],
+    version = "2.0.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "js-yaml_4.1.1",
     package_name = "js-yaml",
-    version = "4.1.1",
     srcs = glob(["js-yaml_4.1.1/**"]),
-    deps = [":argparse_2.0.1"],
+    version = "4.1.1",
     visibility = ["PUBLIC"],
+    deps = [":argparse_2.0.1"],
 )
-
 
 js_library(
     name = "json-buffer_3.0.1",
     package_name = "json-buffer",
-    version = "3.0.1",
     srcs = glob(["json-buffer_3.0.1/**"]),
-    deps = [],
+    version = "3.0.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "json-schema-traverse_0.4.1",
     package_name = "json-schema-traverse",
-    version = "0.4.1",
     srcs = glob(["json-schema-traverse_0.4.1/**"]),
-    deps = [],
+    version = "0.4.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "json-stable-stringify-without-jsonify_1.0.1",
     package_name = "json-stable-stringify-without-jsonify",
-    version = "1.0.1",
     srcs = glob(["json-stable-stringify-without-jsonify_1.0.1/**"]),
-    deps = [],
+    version = "1.0.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "keyv_4.5.4",
     package_name = "keyv",
-    version = "4.5.4",
     srcs = glob(["keyv_4.5.4/**"]),
-    deps = [":json-buffer_3.0.1"],
+    version = "4.5.4",
     visibility = ["PUBLIC"],
+    deps = [":json-buffer_3.0.1"],
 )
-
 
 js_library(
     name = "kleur_4.1.5",
     package_name = "kleur",
-    version = "4.1.5",
     srcs = glob(["kleur_4.1.5/**"]),
-    deps = [],
+    version = "4.1.5",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "known-css-properties_0.37.0",
     package_name = "known-css-properties",
-    version = "0.37.0",
     srcs = glob(["known-css-properties_0.37.0/**"]),
-    deps = [],
+    version = "0.37.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "levn_0.4.1",
     package_name = "levn",
-    version = "0.4.1",
     srcs = glob(["levn_0.4.1/**"]),
+    version = "0.4.1",
+    visibility = ["PUBLIC"],
     deps = [
         ":prelude-ls_1.2.1",
         ":type-check_0.4.0",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "lilconfig_2.1.0",
     package_name = "lilconfig",
-    version = "2.1.0",
     srcs = glob(["lilconfig_2.1.0/**"]),
-    deps = [],
+    version = "2.1.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "locate-character_3.0.0",
     package_name = "locate-character",
-    version = "3.0.0",
     srcs = glob(["locate-character_3.0.0/**"]),
-    deps = [],
+    version = "3.0.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "locate-path_6.0.0",
     package_name = "locate-path",
-    version = "6.0.0",
     srcs = glob(["locate-path_6.0.0/**"]),
-    deps = [":p-locate_5.0.0"],
+    version = "6.0.0",
     visibility = ["PUBLIC"],
+    deps = [":p-locate_5.0.0"],
 )
-
 
 js_library(
     name = "lodash.merge_4.6.2",
     package_name = "lodash.merge",
-    version = "4.6.2",
     srcs = glob(["lodash.merge_4.6.2/**"]),
-    deps = [],
+    version = "4.6.2",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "magic-string_0.30.21",
     package_name = "magic-string",
-    version = "0.30.21",
     srcs = glob(["magic-string_0.30.21/**"]),
-    deps = [":jridgewell_sourcemap-codec_1.5.5"],
+    version = "0.30.21",
     visibility = ["PUBLIC"],
+    deps = [":jridgewell_sourcemap-codec_1.5.5"],
 )
-
 
 js_library(
     name = "minimatch_10.2.4",
     package_name = "minimatch",
-    version = "10.2.4",
     srcs = glob(["minimatch_10.2.4/**"]),
-    deps = [":brace-expansion_5.0.4"],
+    version = "10.2.4",
     visibility = ["PUBLIC"],
+    deps = [":brace-expansion_5.0.4"],
 )
-
 
 js_library(
     name = "minimatch_3.1.5",
     package_name = "minimatch",
-    version = "3.1.5",
     srcs = glob(["minimatch_3.1.5/**"]),
-    deps = [":brace-expansion_1.1.12"],
+    version = "3.1.5",
     visibility = ["PUBLIC"],
+    deps = [":brace-expansion_1.1.12"],
 )
-
 
 js_library(
     name = "mri_1.2.0",
     package_name = "mri",
-    version = "1.2.0",
     srcs = glob(["mri_1.2.0/**"]),
-    deps = [],
+    version = "1.2.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "mrmime_2.0.1",
     package_name = "mrmime",
-    version = "2.0.1",
     srcs = glob(["mrmime_2.0.1/**"]),
-    deps = [],
+    version = "2.0.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "ms_2.1.3",
     package_name = "ms",
-    version = "2.1.3",
     srcs = glob(["ms_2.1.3/**"]),
-    deps = [],
+    version = "2.1.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "nanoid_3.3.11",
     package_name = "nanoid",
-    version = "3.3.11",
     srcs = glob(["nanoid_3.3.11/**"]),
-    deps = [],
+    version = "3.3.11",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "natural-compare_1.4.0",
     package_name = "natural-compare",
-    version = "1.4.0",
     srcs = glob(["natural-compare_1.4.0/**"]),
-    deps = [],
+    version = "1.4.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "obug_2.1.1",
     package_name = "obug",
-    version = "2.1.1",
     srcs = glob(["obug_2.1.1/**"]),
-    deps = [],
+    version = "2.1.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "optionator_0.9.4",
     package_name = "optionator",
-    version = "0.9.4",
     srcs = glob(["optionator_0.9.4/**"]),
+    version = "0.9.4",
+    visibility = ["PUBLIC"],
     deps = [
         ":deep-is_0.1.4",
         ":fast-levenshtein_2.0.6",
@@ -1982,354 +1806,318 @@ js_library(
         ":type-check_0.4.0",
         ":word-wrap_1.2.5",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "p-limit_3.1.0",
     package_name = "p-limit",
-    version = "3.1.0",
     srcs = glob(["p-limit_3.1.0/**"]),
-    deps = [":yocto-queue_0.1.0"],
+    version = "3.1.0",
     visibility = ["PUBLIC"],
+    deps = [":yocto-queue_0.1.0"],
 )
-
 
 js_library(
     name = "p-locate_5.0.0",
     package_name = "p-locate",
-    version = "5.0.0",
     srcs = glob(["p-locate_5.0.0/**"]),
-    deps = [":p-limit_3.1.0"],
+    version = "5.0.0",
     visibility = ["PUBLIC"],
+    deps = [":p-limit_3.1.0"],
 )
-
 
 js_library(
     name = "parent-module_1.0.1",
     package_name = "parent-module",
-    version = "1.0.1",
     srcs = glob(["parent-module_1.0.1/**"]),
-    deps = [":callsites_3.1.0"],
+    version = "1.0.1",
     visibility = ["PUBLIC"],
+    deps = [":callsites_3.1.0"],
 )
-
 
 js_library(
     name = "path-exists_4.0.0",
     package_name = "path-exists",
-    version = "4.0.0",
     srcs = glob(["path-exists_4.0.0/**"]),
-    deps = [],
+    version = "4.0.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "path-key_3.1.1",
     package_name = "path-key",
-    version = "3.1.1",
     srcs = glob(["path-key_3.1.1/**"]),
-    deps = [],
+    version = "3.1.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "picocolors_1.1.1",
     package_name = "picocolors",
-    version = "1.1.1",
     srcs = glob(["picocolors_1.1.1/**"]),
-    deps = [],
+    version = "1.1.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "picomatch_4.0.3",
     package_name = "picomatch",
-    version = "4.0.3",
     srcs = glob(["picomatch_4.0.3/**"]),
-    deps = [],
+    version = "4.0.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "postcss-load-config_3.1.4",
     package_name = "postcss-load-config",
-    version = "3.1.4",
     srcs = glob(["postcss-load-config_3.1.4/**"]),
+    version = "3.1.4",
+    visibility = ["PUBLIC"],
     deps = [
         ":lilconfig_2.1.0",
         ":yaml_1.10.2",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "postcss-safe-parser_7.0.1",
     package_name = "postcss-safe-parser",
-    version = "7.0.1",
     srcs = glob(["postcss-safe-parser_7.0.1/**"]),
-    deps = [":postcss_8.5.6"],
+    version = "7.0.1",
     visibility = ["PUBLIC"],
+    deps = [":postcss_8.5.6"],
 )
-
 
 js_library(
     name = "postcss-scss_4.0.9",
     package_name = "postcss-scss",
-    version = "4.0.9",
     srcs = glob(["postcss-scss_4.0.9/**"]),
-    deps = [":postcss_8.5.6"],
+    version = "4.0.9",
     visibility = ["PUBLIC"],
+    deps = [":postcss_8.5.6"],
 )
-
 
 js_library(
     name = "postcss-selector-parser_7.1.1",
     package_name = "postcss-selector-parser",
-    version = "7.1.1",
     srcs = glob(["postcss-selector-parser_7.1.1/**"]),
+    version = "7.1.1",
+    visibility = ["PUBLIC"],
     deps = [
         ":cssesc_3.0.0",
         ":util-deprecate_1.0.2",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "postcss_8.5.6",
     package_name = "postcss",
-    version = "8.5.6",
     srcs = glob(["postcss_8.5.6/**"]),
+    version = "8.5.6",
+    visibility = ["PUBLIC"],
     deps = [
         ":nanoid_3.3.11",
         ":picocolors_1.1.1",
         ":source-map-js_1.2.1",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "prelude-ls_1.2.1",
     package_name = "prelude-ls",
-    version = "1.2.1",
     srcs = glob(["prelude-ls_1.2.1/**"]),
-    deps = [],
+    version = "1.2.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "prettier-plugin-svelte_3.5.0",
     package_name = "prettier-plugin-svelte",
-    version = "3.5.0",
     srcs = glob(["prettier-plugin-svelte_3.5.0/**"]),
+    version = "3.5.0",
+    visibility = ["PUBLIC"],
     deps = [
         ":prettier_3.8.1",
         ":svelte_5.53.6",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "prettier_3.8.1",
     package_name = "prettier",
-    version = "3.8.1",
     srcs = glob(["prettier_3.8.1/**"]),
-    deps = [],
+    version = "3.8.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "punycode_2.3.1",
     package_name = "punycode",
-    version = "2.3.1",
     srcs = glob(["punycode_2.3.1/**"]),
-    deps = [],
+    version = "2.3.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "readdirp_4.1.2",
     package_name = "readdirp",
-    version = "4.1.2",
     srcs = glob(["readdirp_4.1.2/**"]),
-    deps = [],
+    version = "4.1.2",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "resolve-from_4.0.0",
     package_name = "resolve-from",
-    version = "4.0.0",
     srcs = glob(["resolve-from_4.0.0/**"]),
-    deps = [],
+    version = "4.0.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "rollup_4.59.0",
     package_name = "rollup",
-    version = "4.59.0",
     srcs = glob(["rollup_4.59.0/**"]),
-    deps = [":types_estree_1.0.8"],
+    version = "4.59.0",
     visibility = ["PUBLIC"],
+    deps = [":types_estree_1.0.8"],
 )
-
 
 js_library(
     name = "sade_1.8.1",
     package_name = "sade",
-    version = "1.8.1",
     srcs = glob(["sade_1.8.1/**"]),
-    deps = [":mri_1.2.0"],
+    version = "1.8.1",
     visibility = ["PUBLIC"],
+    deps = [":mri_1.2.0"],
 )
-
 
 js_library(
     name = "semver_7.7.4",
     package_name = "semver",
-    version = "7.7.4",
     srcs = glob(["semver_7.7.4/**"]),
-    deps = [],
+    version = "7.7.4",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "set-cookie-parser_3.0.1",
     package_name = "set-cookie-parser",
-    version = "3.0.1",
     srcs = glob(["set-cookie-parser_3.0.1/**"]),
-    deps = [],
+    version = "3.0.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "shebang-command_2.0.0",
     package_name = "shebang-command",
-    version = "2.0.0",
     srcs = glob(["shebang-command_2.0.0/**"]),
-    deps = [":shebang-regex_3.0.0"],
+    version = "2.0.0",
     visibility = ["PUBLIC"],
+    deps = [":shebang-regex_3.0.0"],
 )
-
 
 js_library(
     name = "shebang-regex_3.0.0",
     package_name = "shebang-regex",
-    version = "3.0.0",
     srcs = glob(["shebang-regex_3.0.0/**"]),
-    deps = [],
+    version = "3.0.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "sirv_3.0.2",
     package_name = "sirv",
-    version = "3.0.2",
     srcs = glob(["sirv_3.0.2/**"]),
+    version = "3.0.2",
+    visibility = ["PUBLIC"],
     deps = [
-        ":polka_url_1.0.0-next.29",
         ":mrmime_2.0.1",
+        ":polka_url_1.0.0-next.29",
         ":totalist_3.0.1",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "source-map-js_1.2.1",
     package_name = "source-map-js",
-    version = "1.2.1",
     srcs = glob(["source-map-js_1.2.1/**"]),
-    deps = [],
+    version = "1.2.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "strip-json-comments_3.1.1",
     package_name = "strip-json-comments",
-    version = "3.1.1",
     srcs = glob(["strip-json-comments_3.1.1/**"]),
-    deps = [],
+    version = "3.1.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "supports-color_7.2.0",
     package_name = "supports-color",
-    version = "7.2.0",
     srcs = glob(["supports-color_7.2.0/**"]),
-    deps = [":has-flag_4.0.0"],
+    version = "7.2.0",
     visibility = ["PUBLIC"],
+    deps = [":has-flag_4.0.0"],
 )
-
 
 js_library(
     name = "svelte-check_4.4.4",
     package_name = "svelte-check",
-    version = "4.4.4",
     srcs = glob(["svelte-check_4.4.4/**"]),
+    version = "4.4.4",
+    visibility = ["PUBLIC"],
     deps = [
-        ":jridgewell_trace-mapping_0.3.31",
         ":chokidar_4.0.3",
         ":fdir_6.5.0",
+        ":jridgewell_trace-mapping_0.3.31",
         ":picocolors_1.1.1",
         ":sade_1.8.1",
         ":svelte_5.53.6",
         ":typescript_5.9.3",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "svelte-eslint-parser_1.5.1",
     package_name = "svelte-eslint-parser",
-    version = "1.5.1",
     srcs = glob(["svelte-eslint-parser_1.5.1/**"]),
+    version = "1.5.1",
+    visibility = ["PUBLIC"],
     deps = [
         ":eslint-scope_8.4.0",
         ":eslint-visitor-keys_4.2.1",
         ":espree_10.4.0",
-        ":postcss_8.5.6",
         ":postcss-scss_4.0.9",
         ":postcss-selector-parser_7.1.1",
+        ":postcss_8.5.6",
         ":semver_7.7.4",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "svelte_5.53.6",
     package_name = "svelte",
-    version = "5.53.6",
     srcs = glob(["svelte_5.53.6/**"]),
+    version = "5.53.6",
+    visibility = ["PUBLIC"],
     deps = [
-        ":jridgewell_remapping_2.3.5",
-        ":jridgewell_sourcemap-codec_1.5.5",
-        ":sveltejs_acorn-typescript_1.0.9",
-        ":types_estree_1.0.8",
-        ":types_trusted-types_2.0.7",
         ":acorn_8.16.0",
         ":aria-query_5.3.1",
         ":axobject-query_4.1.0",
@@ -2338,119 +2126,114 @@ js_library(
         ":esm-env_1.2.2",
         ":esrap_2.2.3",
         ":is-reference_3.0.3",
+        ":jridgewell_remapping_2.3.5",
+        ":jridgewell_sourcemap-codec_1.5.5",
         ":locate-character_3.0.0",
         ":magic-string_0.30.21",
+        ":sveltejs_acorn-typescript_1.0.9",
+        ":types_estree_1.0.8",
+        ":types_trusted-types_2.0.7",
         ":zimmerframe_1.1.4",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "tinyglobby_0.2.15",
     package_name = "tinyglobby",
-    version = "0.2.15",
     srcs = glob(["tinyglobby_0.2.15/**"]),
+    version = "0.2.15",
+    visibility = ["PUBLIC"],
     deps = [
         ":fdir_6.5.0",
         ":picomatch_4.0.3",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "totalist_3.0.1",
     package_name = "totalist",
-    version = "3.0.1",
     srcs = glob(["totalist_3.0.1/**"]),
-    deps = [],
+    version = "3.0.1",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "ts-api-utils_2.4.0",
     package_name = "ts-api-utils",
-    version = "2.4.0",
     srcs = glob(["ts-api-utils_2.4.0/**"]),
-    deps = [":typescript_5.9.3"],
+    version = "2.4.0",
     visibility = ["PUBLIC"],
+    deps = [":typescript_5.9.3"],
 )
-
 
 js_library(
     name = "type-check_0.4.0",
     package_name = "type-check",
-    version = "0.4.0",
     srcs = glob(["type-check_0.4.0/**"]),
-    deps = [":prelude-ls_1.2.1"],
+    version = "0.4.0",
     visibility = ["PUBLIC"],
+    deps = [":prelude-ls_1.2.1"],
 )
-
 
 js_library(
     name = "typescript-eslint_8.56.1",
     package_name = "typescript-eslint",
-    version = "8.56.1",
     srcs = glob(["typescript-eslint_8.56.1/**"]),
+    version = "8.56.1",
+    visibility = ["PUBLIC"],
     deps = [
+        ":eslint_9.39.3",
         ":typescript-eslint_eslint-plugin_8.56.1",
         ":typescript-eslint_parser_8.56.1",
         ":typescript-eslint_typescript-estree_8.56.1",
         ":typescript-eslint_utils_8.56.1",
-        ":eslint_9.39.3",
         ":typescript_5.9.3",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "typescript_5.9.3",
     package_name = "typescript",
-    version = "5.9.3",
     srcs = glob(["typescript_5.9.3/**"]),
-    deps = [],
+    version = "5.9.3",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "undici-types_6.21.0",
     package_name = "undici-types",
-    version = "6.21.0",
     srcs = glob(["undici-types_6.21.0/**"]),
-    deps = [],
+    version = "6.21.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "uri-js_4.4.1",
     package_name = "uri-js",
-    version = "4.4.1",
     srcs = glob(["uri-js_4.4.1/**"]),
-    deps = [":punycode_2.3.1"],
+    version = "4.4.1",
     visibility = ["PUBLIC"],
+    deps = [":punycode_2.3.1"],
 )
-
 
 js_library(
     name = "util-deprecate_1.0.2",
     package_name = "util-deprecate",
-    version = "1.0.2",
     srcs = glob(["util-deprecate_1.0.2/**"]),
-    deps = [],
+    version = "1.0.2",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "vite_7.3.1",
     package_name = "vite",
-    version = "7.3.1",
     srcs = glob(["vite_7.3.1/**"]),
+    version = "7.3.1",
+    visibility = ["PUBLIC"],
     deps = [
         ":esbuild_0.27.3",
         ":fdir_6.5.0",
@@ -2459,67 +2242,58 @@ js_library(
         ":rollup_4.59.0",
         ":tinyglobby_0.2.15",
     ],
-    visibility = ["PUBLIC"],
 )
-
 
 js_library(
     name = "vitefu_1.1.2",
     package_name = "vitefu",
-    version = "1.1.2",
     srcs = glob(["vitefu_1.1.2/**"]),
-    deps = [],
+    version = "1.1.2",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "which_2.0.2",
     package_name = "which",
-    version = "2.0.2",
     srcs = glob(["which_2.0.2/**"]),
-    deps = [":isexe_2.0.0"],
+    version = "2.0.2",
     visibility = ["PUBLIC"],
+    deps = [":isexe_2.0.0"],
 )
-
 
 js_library(
     name = "word-wrap_1.2.5",
     package_name = "word-wrap",
-    version = "1.2.5",
     srcs = glob(["word-wrap_1.2.5/**"]),
-    deps = [],
+    version = "1.2.5",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "yaml_1.10.2",
     package_name = "yaml",
-    version = "1.10.2",
     srcs = glob(["yaml_1.10.2/**"]),
-    deps = [],
+    version = "1.10.2",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "yocto-queue_0.1.0",
     package_name = "yocto-queue",
-    version = "0.1.0",
     srcs = glob(["yocto-queue_0.1.0/**"]),
-    deps = [],
+    version = "0.1.0",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
 
 js_library(
     name = "zimmerframe_1.1.4",
     package_name = "zimmerframe",
-    version = "1.1.4",
     srcs = glob(["zimmerframe_1.1.4/**"]),
-    deps = [],
+    version = "1.1.4",
     visibility = ["PUBLIC"],
+    deps = [],
 )
-
-

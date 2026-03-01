@@ -1,7 +1,7 @@
 use anyhow::{Context, Result};
 use yaml_serde::Value;
 
-use crate::lockfile::{sanitize_target_name, Lockfile, LockfileParser, PackageInfo};
+use crate::lockfile::{Lockfile, LockfileParser, PackageInfo, sanitize_target_name};
 use crate::npmrc::NpmrcConfig;
 
 pub struct BunParser;

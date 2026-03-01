@@ -1,16 +1,19 @@
-load("//rules/js:js_test.bzl", "js_test")
 load("//rules/js:js_run.bzl", "js_run")
+load("//rules/js:js_test.bzl", "js_test")
 
 js_run(
     name = "start",
+    srcs = ["server.ts"],
     entry = "server.ts",
     js_runtime = "toolchains//:deno_info",
-    srcs = ["server.ts"],
 )
 
 js_test(
     name = "test",
+    srcs = [
+        "server.test.ts",
+        "server.ts",
+    ],
     entry = "server.test.ts",
     js_runtime = "toolchains//:deno_info",
-    srcs = ["server.test.ts", "server.ts"],
 )

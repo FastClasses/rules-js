@@ -1,5 +1,5 @@
-load(":providers.bzl", "JsLibraryInfo", "JsRuntimeInfo")
 load(":node_modules.bzl", "create_node_modules_tree")
+load(":providers.bzl", "JsLibraryInfo", "JsRuntimeInfo")
 
 def _js_run_impl(ctx):
     npm_deps = [d for d in ctx.attrs.deps if JsLibraryInfo in d]
@@ -21,7 +21,7 @@ def _js_run_impl(ctx):
     command = [exe]
     if runtime.runtime_name == "deno":
         command.extend(["run", "-A"])
-    
+
     command.extend([script, exe, src_dir, entry] + ctx.attrs.run_args)
 
     return [
@@ -30,13 +30,22 @@ def _js_run_impl(ctx):
     ]
 
 js_run = rule(
-    impl = _js_run_impl,
     attrs = {
         "entry": attrs.string(),
-        "run_args": attrs.list(attrs.string(), default = []),
-        "srcs": attrs.list(attrs.source(allow_directory = True), default = []),
-        "deps": attrs.list(attrs.dep(), default = []),
+        "run_args": attrs.list(
+            attrs.string(),
+            default = [],
+        ),
+        "srcs": attrs.list(
+            attrs.source(allow_directory = True),
+            default = [],
+        ),
+        "deps": attrs.list(
+            attrs.dep(),
+            default = [],
+        ),
         "js_runtime": attrs.dep(default = "toolchains//:js"),
         "_run_native_test": attrs.source(default = "//rules/js:run_native_test.mjs"),
-    }
+    },
+    impl = _js_run_impl,
 )

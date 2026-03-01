@@ -1,7 +1,7 @@
 use anyhow::{Context, Result};
 use serde_json::Value;
 
-use crate::lockfile::{sanitize_target_name, Lockfile, LockfileParser, PackageInfo};
+use crate::lockfile::{Lockfile, LockfileParser, PackageInfo, sanitize_target_name};
 use crate::npmrc::NpmrcConfig;
 
 pub struct DenoParser;
@@ -133,7 +133,7 @@ fn parse_at_version(s: &str) -> Option<(String, String)> {
 }
 
 fn hex_to_base64(hex: &str) -> String {
-    use base64::{engine::general_purpose::STANDARD, Engine as _};
+    use base64::{Engine as _, engine::general_purpose::STANDARD};
     let bytes: Vec<u8> = (0..hex.len())
         .step_by(2)
         .filter_map(|i| u8::from_str_radix(&hex[i..i + 2], 16).ok())
