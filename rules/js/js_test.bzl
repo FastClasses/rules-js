@@ -1,4 +1,4 @@
-load(":providers.bzl", "JsLibraryInfo", "NodeToolchainInfo", "BunToolchainInfo", "DenoToolchainInfo")
+load(":providers.bzl", "JsLibraryInfo", "JsRuntimeInfo")
 load(":node_modules.bzl", "create_node_modules_tree")
 
 def _js_test_impl(ctx):
@@ -14,18 +14,14 @@ def _js_test_impl(ctx):
 
     src_dir = ctx.actions.copied_dir("src_dir", copy_map)
 
-    if ctx.attrs.runtime == "bun":
-        exe = ctx.attrs._bun[BunToolchainInfo].bun_exe
-    elif ctx.attrs.runtime == "deno":
-        exe = ctx.attrs._deno[DenoToolchainInfo].deno_exe
-    else:
-        exe = ctx.attrs._node[NodeToolchainInfo].node_exe
+    runtime = ctx.attrs.js_runtime[JsRuntimeInfo]
+    exe = runtime.exe
 
     script = ctx.attrs._run_native_test
     entry = ctx.attrs.entry
 
     command = [exe]
-    if ctx.attrs.runtime == "deno":
+    if runtime.runtime_name == "deno":
         command.extend(["run", "-A"])
     
     command.extend([script, exe, src_dir, entry])
@@ -43,12 +39,9 @@ js_test = rule(
     impl = _js_test_impl,
     attrs = {
         "entry": attrs.string(),
-        "runtime": attrs.enum(["node", "bun", "deno"], default = "node"),
         "srcs": attrs.list(attrs.source(allow_directory = True), default = []),
         "deps": attrs.list(attrs.dep(), default = []),
-        "_node": attrs.dep(default = "toolchains//:node_info"),
-        "_bun": attrs.dep(default = "toolchains//:bun_info"),
-        "_deno": attrs.dep(default = "toolchains//:deno_info"),
+        "js_runtime": attrs.dep(default = "toolchains//:js"),
         "_run_native_test": attrs.source(default = "//rules/js:run_native_test.mjs"),
     }
 )

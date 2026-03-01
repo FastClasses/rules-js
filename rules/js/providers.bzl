@@ -1,3 +1,8 @@
+JsRuntimeInfo = provider(fields = {
+    "exe": provider_field(typing.Any, default = None),
+    "runtime_name": provider_field(str, default = ""),
+})
+
 JsLibraryInfo = provider(fields = {
     "package_name": provider_field(str, default = ""),
     "version": provider_field(str, default = ""),

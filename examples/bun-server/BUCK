@@ -4,13 +4,13 @@ load("//rules/js:js_run.bzl", "js_run")
 js_run(
     name = "start",
     entry = "server.js",
-    runtime = "bun",
+    js_runtime = "toolchains//:bun_info",
     srcs = ["server.js"],
 )
 
 js_test(
     name = "test",
     entry = "server.test.js",
-    runtime = "bun",
+    js_runtime = "toolchains//:bun_info",
     srcs = ["server.test.js", "server.js"],
 )

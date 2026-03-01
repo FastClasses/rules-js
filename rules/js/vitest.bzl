@@ -1,4 +1,4 @@
-load(":providers.bzl", "JsLibraryInfo", "NodeToolchainInfo")
+load(":providers.bzl", "JsLibraryInfo", "JsRuntimeInfo")
 load(":node_modules.bzl", "create_node_modules_tree")
 
 def _vitest_test_impl(ctx):
@@ -17,7 +17,7 @@ def _vitest_test_impl(ctx):
 
     src_dir = ctx.actions.copied_dir("src_dir", copy_map)
 
-    node_exe = ctx.attrs._node[NodeToolchainInfo].node_exe
+    node_exe = ctx.attrs._js_runtime[JsRuntimeInfo].exe
     script = ctx.attrs._run_vitest
 
     return [
@@ -35,7 +35,7 @@ vitest_test = rule(
         "srcs": attrs.list(attrs.source(allow_directory = True), default = []),
         "vitest_config": attrs.option(attrs.source(), default = None),
         "deps": attrs.list(attrs.dep()),
-        "_node": attrs.dep(default = "toolchains//:node_info"),
+        "_js_runtime": attrs.dep(default = "toolchains//:js"),
         "_run_vitest": attrs.source(default = "//rules/js:run_vitest.mjs"),
     }
 )

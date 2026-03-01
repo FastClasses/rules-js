@@ -1,13 +1,12 @@
 load("@prelude//toolchains:demo.bzl", "system_demo_toolchains")
 load(
     "@root//rules/js:toolchain.bzl",
+    "js_default_runtime",
     "system_bun_toolchain",
     "system_deno_toolchain",
     "system_node_toolchain",
 )
 
-# All the default toolchains, suitable for a quick demo or early prototyping.
-# Most real projects should copy/paste the implementation to configure them.
 system_demo_toolchains()
 
 system_node_toolchain(
@@ -20,4 +19,8 @@ system_bun_toolchain(
 
 system_deno_toolchain(
     name = "deno",
+)
+
+js_default_runtime(
+    runtime = ":node_info",
 )

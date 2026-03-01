@@ -1,4 +1,4 @@
-load(":providers.bzl", "NodeToolchainInfo", "BunToolchainInfo", "DenoToolchainInfo")
+load(":providers.bzl", "JsRuntimeInfo", "NodeToolchainInfo", "BunToolchainInfo", "DenoToolchainInfo")
 
 _NODE_SHASUM256 = {
     "node-v22.14.0-linux-x64.tar.gz": "9d942932535988091034dc94cc5f42b6dc8784d6366df3a36c4c9ccb3996f0c2",
@@ -70,6 +70,7 @@ def _node_toolchain_rule_impl(ctx):
     return [
         DefaultInfo(default_output = ctx.attrs.node_archive[DefaultInfo].default_outputs[0]),
         NodeToolchainInfo(node_exe = node_exe),
+        JsRuntimeInfo(exe = node_exe, runtime_name = "node"),
     ]
 
 _node_toolchain_rule = rule(
@@ -145,6 +146,7 @@ def _bun_toolchain_rule_impl(ctx):
     return [
         DefaultInfo(default_output = ctx.attrs.bun_archive[DefaultInfo].default_outputs[0]),
         BunToolchainInfo(bun_exe = bun_exe),
+        JsRuntimeInfo(exe = bun_exe, runtime_name = "bun"),
     ]
 
 _bun_toolchain_rule = rule(
@@ -213,6 +215,7 @@ def _deno_toolchain_rule_impl(ctx):
     return [
         DefaultInfo(default_output = ctx.attrs.deno_archive[DefaultInfo].default_outputs[0]),
         DenoToolchainInfo(deno_exe = deno_exe),
+        JsRuntimeInfo(exe = deno_exe, runtime_name = "deno"),
     ]
 
 _deno_toolchain_rule = rule(
@@ -222,3 +225,13 @@ _deno_toolchain_rule = rule(
         "deno_exe_path": attrs.string(),
     },
 )
+
+def js_default_runtime(
+    name = "js",
+    runtime = ":node_info",
+):
+    native.alias(
+        name = name,
+        actual = runtime,
+        visibility = ["PUBLIC"],
+    )

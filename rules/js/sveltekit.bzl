@@ -37,7 +37,6 @@ def sveltekit_build(
         entry = "not_used_by_vite_dev",
         run_args = [],
         _run_native_test = "//rules/js:run_vite_dev.mjs",
-        runtime = "node", 
     )
 
     svelte_check_test(
