@@ -1,0 +1,100 @@
+name: npm-herder release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'npm-herder/**'
+  workflow_dispatch:
+
+jobs:
+  check_version:
+    runs-on: ubuntu-latest
+    outputs:
+      needs_release: ${{ steps.check.outputs.needs_release }}
+      tag: ${{ steps.check.outputs.tag }}
+      version: ${{ steps.check.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check version
+        id: check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python .github/scripts/npm-herder-release.py check
+
+  build:
+    needs: check_version
+    if: needs.check_version.outputs.needs_release == 'true'
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-22.04
+            platform: linux-x86_64
+            bin: npm-herder
+          - os: macos-14
+            platform: macos-aarch64
+            bin: npm-herder
+          - os: macos-15-intel
+            platform: macos-x86_64
+            bin: npm-herder
+          - os: windows-2022
+            platform: windows-x86_64
+            bin: npm-herder.exe
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Build
+        working-directory: npm-herder
+        run: cargo build --release --locked --bin npm-herder
+
+      - name: Package
+        shell: bash
+        run: |
+          mkdir -p dist
+          tar -czvf dist/npm-herder-${{ matrix.platform }}.tar.gz -C target/release ${{ matrix.bin }}
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-herder-${{ matrix.platform }}
+          path: dist/npm-herder-${{ matrix.platform }}.tar.gz
+
+  release:
+    needs: [check_version, build]
+    if: needs.check_version.outputs.needs_release == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: npm-herder-*
+          path: dist-downloads
+          merge-multiple: true
+
+      - name: Setup dist folder
+        run: |
+          mkdir -p dist
+          mv dist-downloads/* dist/
+
+      - name: Generate dotslash file
+        run: python .github/scripts/npm-herder-release.py publish
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create ${{ needs.check_version.outputs.tag }} \
+            --title "npm-herder ${{ needs.check_version.outputs.version }}" \
+            --notes "Automated release of npm-herder ${{ needs.check_version.outputs.version }}" \
+            dist/*

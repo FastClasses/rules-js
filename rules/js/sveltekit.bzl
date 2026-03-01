@@ -1,5 +1,6 @@
 load(":vite.bzl", "vite_build")
 load(":js_run.bzl", "js_run")
+load(":svelte_check.bzl", "svelte_check_test")
 
 def sveltekit_build(
     name,
@@ -37,4 +38,12 @@ def sveltekit_build(
         run_args = [],
         _run_native_test = "//rules/js:run_vite_dev.mjs",
         runtime = "node", 
+    )
+
+    svelte_check_test(
+        name = name + "_check",
+        srcs = srcs + [
+            "tsconfig.json",
+        ],
+        deps = deps,
     )

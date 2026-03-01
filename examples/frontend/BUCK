@@ -1,5 +1,6 @@
 load("//rules/js:sveltekit.bzl", "sveltekit_build")
 load("//rules/js:vitest.bzl", "vitest_test")
+load("//rules/js:eslint.bzl", "eslint_check")
 
 sveltekit_build(
     name = "web_app",
@@ -14,6 +15,8 @@ sveltekit_build(
         "//examples/frontend/vendor:sveltejs_vite-plugin-svelte_6.2.4",
         "//examples/frontend/vendor:vite_7.3.1",
         "//examples/frontend/vendor:sveltejs_adapter-node_5.5.4",
+        "//examples/frontend/vendor:svelte-check_4.4.4",
+        "//examples/frontend/vendor:vitest_3.2.4",
     ],
 )
 
@@ -31,4 +34,29 @@ vitest_test(
         "//examples/frontend/vendor:vite_7.3.1",
         "//examples/frontend/vendor:vitest_3.2.4",
     ],
+)
+
+eslint_check(
+    name = "lint",
+    srcs = [
+        "src",
+        "eslint.config.js",
+        "svelte.config.js",
+        "tsconfig.json",
+        "package.json",
+        ".gitignore",
+    ],
+    eslint_config = "eslint.config.js",
+    deps = [
+        "//examples/frontend/vendor:eslint_9.39.3",
+        "//examples/frontend/vendor:eslint-plugin-svelte_3.15.0",
+        "//examples/frontend/vendor:typescript-eslint_8.56.1",
+        "//examples/frontend/vendor:svelte_5.53.6",
+        "//examples/frontend/vendor:eslint-config-prettier_10.1.8",
+        "//examples/frontend/vendor:eslint_compat_2.0.2",
+        "//examples/frontend/vendor:globals_17.3.0",
+        "//examples/frontend/vendor:sveltejs_adapter-node_5.5.4",
+        "//examples/frontend/vendor:sveltejs_vite-plugin-svelte_6.2.4",
+        "//examples/frontend/vendor:vite_7.3.1",
+    ]
 )

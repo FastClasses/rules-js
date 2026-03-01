@@ -33,3 +33,9 @@ export_file(
     src = "scripts/run_vite_dev.mjs",
     visibility = ["PUBLIC"],
 )
+
+export_file(
+    name = "run_svelte_check.mjs",
+    src = "scripts/run_svelte_check.mjs",
+    visibility = ["PUBLIC"],
+)
