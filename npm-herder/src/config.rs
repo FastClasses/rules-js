@@ -22,6 +22,7 @@ pub struct HerderConfig {
     pub vendor: VendorConfig,
 
     #[serde(default)]
+    #[allow(dead_code)]
     pub platform: HashMap<String, PlatformConfig>,
 }
 
@@ -47,6 +48,7 @@ pub struct VendorConfig {
 }
 
 #[derive(Debug, Deserialize)]
+#[allow(dead_code)]
 pub struct PlatformConfig {
     pub os: String,
     pub arch: String,

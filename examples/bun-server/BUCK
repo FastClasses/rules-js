@@ -1,0 +1,16 @@
+load("//rules/js:js_test.bzl", "js_test")
+load("//rules/js:js_run.bzl", "js_run")
+
+js_run(
+    name = "start",
+    entry = "server.js",
+    runtime = "bun",
+    srcs = ["server.js"],
+)
+
+js_test(
+    name = "test",
+    entry = "server.test.js",
+    runtime = "bun",
+    srcs = ["server.test.js", "server.js"],
+)

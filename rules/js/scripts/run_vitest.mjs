@@ -1,14 +1,16 @@
-const path = require('path');
-const { spawnSync } = require('child_process');
+import path from "node:path";
+import { spawnSync } from "node:child_process";
+import process from "node:process";
 
 const nodeExe = path.resolve(process.argv[2]);
 const srcDir = path.resolve(process.argv[3]);
-const entry = process.argv[4];
+const vitestJs = path.join(srcDir, 'node_modules', 'vitest', 'vitest.mjs');
 
 process.env.NODE_PATH = path.join(srcDir, 'node_modules');
+
 process.chdir(srcDir);
 
-const result = spawnSync(nodeExe, [entry], {
+const result = spawnSync(nodeExe, [vitestJs, 'run', '--passWithNoTests'], {
     stdio: 'inherit',
     env: process.env
 });

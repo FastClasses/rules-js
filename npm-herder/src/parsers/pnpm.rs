@@ -7,10 +7,6 @@ use crate::npmrc::NpmrcConfig;
 pub struct PnpmParser;
 
 impl LockfileParser for PnpmParser {
-    fn name(&self) -> &str {
-        "pnpm"
-    }
-
     fn parse(&self, path: &str, npmrc: &NpmrcConfig) -> Result<Lockfile> {
         let content =
             std::fs::read_to_string(path).context(format!("Failed to read lockfile: {}", path))?;

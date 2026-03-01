@@ -21,8 +21,6 @@ pub struct Lockfile {
 }
 
 pub trait LockfileParser {
-    fn name(&self) -> &str;
-
     fn parse(&self, path: &str, npmrc: &NpmrcConfig) -> Result<Lockfile>;
 }
 

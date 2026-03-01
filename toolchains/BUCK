@@ -1,5 +1,10 @@
 load("@prelude//toolchains:demo.bzl", "system_demo_toolchains")
-load("@root//rules/js:toolchain.bzl", "system_node_toolchain")
+load(
+    "@root//rules/js:toolchain.bzl",
+    "system_bun_toolchain",
+    "system_deno_toolchain",
+    "system_node_toolchain",
+)
 
 # All the default toolchains, suitable for a quick demo or early prototyping.
 # Most real projects should copy/paste the implementation to configure them.
@@ -7,4 +12,12 @@ system_demo_toolchains()
 
 system_node_toolchain(
     name = "node",
+)
+
+system_bun_toolchain(
+    name = "bun",
+)
+
+system_deno_toolchain(
+    name = "deno",
 )

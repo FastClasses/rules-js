@@ -1,6 +1,7 @@
-const path = require('path');
-const fs = require('fs');
-const { spawnSync } = require('child_process');
+import path from "node:path";
+import fs from "node:fs";
+import { spawnSync } from "node:child_process";
+import process from "node:process";
 
 const nodeExe = path.resolve(process.argv[2]);
 const srcDir = path.resolve(process.argv[3]);

@@ -1,15 +1,13 @@
 load(":providers.bzl", "JsLibraryInfo", "NodeToolchainInfo", "BunToolchainInfo", "DenoToolchainInfo")
 load(":node_modules.bzl", "create_node_modules_tree")
 
-def _js_test_impl(ctx):
+def _js_run_impl(ctx):
     npm_deps = [d for d in ctx.attrs.deps if JsLibraryInfo in d]
     node_modules = create_node_modules_tree(ctx, npm_deps)
 
     copy_map = {}
-    
     for src in ctx.attrs.srcs:
         copy_map[src.short_path] = src
-
     copy_map["node_modules"] = node_modules
 
     src_dir = ctx.actions.copied_dir("src_dir", copy_map)
@@ -28,22 +26,19 @@ def _js_test_impl(ctx):
     if ctx.attrs.runtime == "deno":
         command.extend(["run", "-A"])
     
-    command.extend([script, exe, src_dir, entry])
+    command.extend([script, exe, src_dir, entry] + ctx.attrs.run_args)
 
     return [
         DefaultInfo(),
-        ExternalRunnerTestInfo(
-            type = "js_test",
-            command = command,
-            run_from_project_root = True,
-        )
+        RunInfo(args = command),
     ]
 
-js_test = rule(
-    impl = _js_test_impl,
+js_run = rule(
+    impl = _js_run_impl,
     attrs = {
         "entry": attrs.string(),
         "runtime": attrs.enum(["node", "bun", "deno"], default = "node"),
+        "run_args": attrs.list(attrs.string(), default = []),
         "srcs": attrs.list(attrs.source(allow_directory = True), default = []),
         "deps": attrs.list(attrs.dep(), default = []),
         "_node": attrs.dep(default = "toolchains//:node_info"),

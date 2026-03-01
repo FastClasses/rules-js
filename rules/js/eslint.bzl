@@ -36,6 +36,6 @@ eslint_check = rule(
         "eslint_config": attrs.option(attrs.source(), default = None),
         "deps": attrs.list(attrs.dep()),
         "_node": attrs.dep(default = "toolchains//:node_info"),
-        "_run_eslint": attrs.source(default = "//rules/js:run_eslint.cjs"),
+        "_run_eslint": attrs.source(default = "//rules/js:run_eslint.mjs"),
     }
 )

@@ -36,6 +36,6 @@ vitest_test = rule(
         "vitest_config": attrs.option(attrs.source(), default = None),
         "deps": attrs.list(attrs.dep()),
         "_node": attrs.dep(default = "toolchains//:node_info"),
-        "_run_vitest": attrs.source(default = "//rules/js:run_vitest.cjs"),
+        "_run_vitest": attrs.source(default = "//rules/js:run_vitest.mjs"),
     }
 )

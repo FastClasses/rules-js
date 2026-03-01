@@ -51,7 +51,7 @@ impl NpmrcConfig {
         )
     }
 
-    fn default_config() -> Self {
+    pub fn default_config() -> Self {
         NpmrcConfig {
             default_registry: "https://registry.npmjs.org".to_string(),
             scoped_registries: HashMap::new(),

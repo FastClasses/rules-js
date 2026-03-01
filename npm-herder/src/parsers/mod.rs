@@ -1,3 +1,5 @@
+pub mod bun;
+pub mod deno;
 pub mod pnpm;
 
 use crate::lockfile::LockfileParser;
@@ -12,11 +14,9 @@ pub fn detect_parser(lockfile_path: &str) -> Box<dyn LockfileParser> {
         eprintln!("Warning: yarn lockfile support is not yet implemented, trying pnpm parser");
         Box::new(pnpm::PnpmParser)
     } else if lockfile_path.contains("bun.lock") {
-        eprintln!("Warning: bun lockfile support is not yet implemented, trying pnpm parser");
-        Box::new(pnpm::PnpmParser)
-    } else if lockfile_path.ends_with("deno.lock") {
-        eprintln!("Warning: deno lockfile support is not yet implemented, trying pnpm parser");
-        Box::new(pnpm::PnpmParser)
+        Box::new(bun::BunParser)
+    } else if lockfile_path.ends_with("deno.lock") || lockfile_path.ends_with("deno.lock.json") {
+        Box::new(deno::DenoParser)
     } else {
         eprintln!("Warning: could not detect package manager, defaulting to pnpm");
         Box::new(pnpm::PnpmParser)

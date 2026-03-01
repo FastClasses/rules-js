@@ -33,6 +33,6 @@ typescript_check = rule(
         "tsconfig": attrs.source(default = "tsconfig.json"),
         "deps": attrs.list(attrs.dep()),
         "_node": attrs.dep(default = "toolchains//:node_info"),
-        "_run_tsc": attrs.source(default = "//rules/js:run_tsc.cjs"),
+        "_run_tsc": attrs.source(default = "//rules/js:run_tsc.mjs"),
     }
 )

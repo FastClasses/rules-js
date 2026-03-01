@@ -1,29 +1,35 @@
 export_file(
-    name = "build_vite.cjs",
-    src = "scripts/build_vite.cjs",
+    name = "build_vite.mjs",
+    src = "scripts/build_vite.mjs",
     visibility = ["PUBLIC"],
 )
 
 export_file(
-    name = "run_vitest.cjs",
-    src = "scripts/run_vitest.cjs",
+    name = "run_vitest.mjs",
+    src = "scripts/run_vitest.mjs",
     visibility = ["PUBLIC"],
 )
 
 export_file(
-    name = "run_js_test.cjs",
-    src = "scripts/run_js_test.cjs",
+    name = "run_native_test.mjs",
+    src = "scripts/run_native_test.mjs",
     visibility = ["PUBLIC"],
 )
 
 export_file(
-    name = "run_tsc.cjs",
-    src = "scripts/run_tsc.cjs",
+    name = "run_tsc.mjs",
+    src = "scripts/run_tsc.mjs",
     visibility = ["PUBLIC"],
 )
 
 export_file(
-    name = "run_eslint.cjs",
-    src = "scripts/run_eslint.cjs",
+    name = "run_eslint.mjs",
+    src = "scripts/run_eslint.mjs",
+    visibility = ["PUBLIC"],
+)
+
+export_file(
+    name = "run_vite_dev.mjs",
+    src = "scripts/run_vite_dev.mjs",
     visibility = ["PUBLIC"],
 )

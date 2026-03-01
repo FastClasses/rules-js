@@ -8,3 +8,11 @@ JsLibraryInfo = provider(fields = {
 NodeToolchainInfo = provider(fields = {
     "node_exe": provider_field(typing.Any, default = None),
 })
+
+BunToolchainInfo = provider(fields = {
+    "bun_exe": provider_field(typing.Any, default = None),
+})
+
+DenoToolchainInfo = provider(fields = {
+    "deno_exe": provider_field(typing.Any, default = None),
+})
